@@ -1,0 +1,925 @@
+<!-- wp:luckywp/tableofcontents /-->
+
+<!-- wp:paragraph -->
+<p>De PICE  datadictionary bestaat uit de volgende datasets:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol><li>Patiënt data</li><li>Ziekenhuis episode</li><li>PICU episode<ol><li>Beademings/katheter dagen</li><li>Bijkomende diagnoses</li><li>Complicaties</li></ol></li></ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Data sets</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Per dataset worden de volgende datapunten vastgelegd:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Patient</h3>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td><strong>LABEL</strong></td><td><strong>NAAM</strong></td><td><strong>TYPE</strong></td><td><strong>VERPLICHT</strong></td></tr><tr><td>Land code van de herkomst van de patiënt</td><td>land</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Identificatie_code">Identificatie code</a> </td><td>idcode</td><td>geheel getal</td><td>ja</td></tr><tr><td>Voorletters</td><td>voorl</td><td>tekst</td><td></td></tr><tr><td>Voornaam</td><td>voornaam</td><td>tekst</td><td></td></tr><tr><td>Tussenvoegsels</td><td>tussen</td><td>tekst</td><td></td></tr><tr><td>Eigen achternaam</td><td>naam</td><td>tekst</td><td></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Geslacht">Geslacht</a></td><td>geslacht</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Geboortedatum">Geboortedatum</a></td><td>gebdat</td><td>datum</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Vitale_status">Vital status</a></td><td>status</td><td>optie set</td><td>ja</td></tr><tr><td>Datum van overlijden</td><td>datovl</td><td>datum</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Plaats_van_overlijden">Plaats van overlijden</a></td><td>adm-deceasedwhereid</td><td>optie set</td><td></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Wijze_van_overlijden">Wijze van overlijden</a></td><td>adm-deathmodeid</td><td>optie set</td><td></td></tr><tr><td>Datum waarop record is aangemaakt</td><td>recordcreated</td><td>datum</td><td></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Geboortegewicht">Geboortegewicht</a> (in kilogram)</td><td>pat-weight-of-birth</td><td>decimaal getal</td><td></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Zwangerschapsduur">Zwangerschapsduur</a> (in weken)</td><td>pat-zwduur</td><td>geheel getal</td><td></td></tr></tbody></table><figcaption>Data set Patient</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Identificatie code</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>De <em>identificatie code </em>is de betreffende identificatie code van het land waar de patiënt inwoner is:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li><a rel="noreferrer noopener" href="https://nl.wikipedia.org/wiki/Rijksregisternummer" target="_blank">Belgium: Rijksregisternummer</a></li><li><a rel="noreferrer noopener" href="https://de.wikipedia.org/wiki/Ausweisnummer" target="_blank">Germany: Ausweisnummer</a></li><li><a rel="noreferrer noopener" href="https://nl.wikipedia.org/wiki/Burgerservicenummer" target="_blank">Netherlands: Burger Service Nummer</a></li><li><a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/Personal_identity_number_%28Sweden%29" target="_blank">Sweden: Personal Identity Number</a></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Voor de historische PICE gegevens uit de Click database (in principe t/m 2018) zijn er alleen lokale identificatie codes beschikbaar.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Geboortedatum</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>De <em>geboortedatum</em> van de patiënt. Als de dag, maand en/of het jaar onbekend is moet voor de dag 15, voor de maand 6 en het geschatte jaartal worden ingevuld.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Geboortegewicht</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Het <em>geboortegewicht</em> van de patiënt in kg. Alleen voor patiënten die bij opname jonger zijn dan 12 maanden.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Zwangerschapsduur</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>Zwangerschapsduur</strong> ex-prematuren in weken (als leeftijd bij opname &lt; 2 jaar).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Optie sets voor Patient</h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Geslacht</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>Man</td></tr><tr><td>Vrouw</td></tr><tr><td>Onbekend</td></tr></tbody></table><figcaption>Optie set Geslacht</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Het genotypisch geslacht van de patiënt, waarbij <em>Onbekend</em> ook staat voor niet te bepalen, onzeker en transsexualiteit.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Vitale status</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>In leven</td></tr><tr><td>Overleden</td></tr><tr><td>Onbekend</td></tr></tbody></table><figcaption>Optie set Vitale status</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Plaats van overlijden</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>Niet overleden</td></tr><tr><td>In eigen IC</td></tr><tr><td>In eigen UMC</td></tr><tr><td>In andere IC</td></tr><tr><td>In ander ziekenhuis</td></tr><tr><td>Thuis</td></tr><tr><td>Anders</td></tr><tr><td>Op OK tijdens IC opname</td></tr></tbody></table><figcaption>Optie set Plaats van overlijden</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Wijze van overlijden</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>Hersendood</td></tr><tr><td>Max met CPR</td></tr><tr><td>Max zonder CPR</td></tr><tr><td>Limiteren/staken</td></tr></tbody></table><figcaption>Optie set Wijze van overlijden</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Geeft de context waarin de patiënt is overleden. Is verplicht indien de patiënt is overleden op de eigen PICU.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol><li>Hersendood (klinisch hersendood): Overlijden na vaststellen hersendood; als bij hersendood de patiënt wordt geëxtubeerd en van actieve beademing gehaald geldt dat niet als beperking van behandeling.</li><li>Maximale behandeling met CPR: Overlijden met/na maximale behandeling, waarbij ook CPR is ingezet.</li><li>Maximale behandeling zonder CPR.</li><li>Limiteren, niet instellen of staken van een levensverlengende of IC therapie: Overlijden nadat is besloten om geen nieuwe levensverlengende therapieën in te zetten (waarbij bestaande behandeling wel wordt voortgezet), of na stoppen levensverlengende of IC-therapie (zoals bv.: actieve beademing, hemodialyse, ECMO, inotropica of extra vulling).</li></ol>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Ziekenhuis Episode</h3>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td><strong>LABEL</strong></td><td><strong>NAAM</strong></td><td><strong>TYPE</strong></td><td><strong>&nbsp;VERPLICHT</strong></td></tr><tr><td>Ziekenhuis</td><td>ziekenhuis-episode-id</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Patientnummer">Patiëntnummer binnen het ziekenhuis</a></td><td>ziekenhuis-episode-upn</td><td>tekst</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Postcode">Postcode</a></td><td>pcode</td><td>tekst</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Opname_datum_ziekenhuis">Opnamedatum ziekenhuis</a></td><td>adm-hosp-admdate</td><td>datum en tijd</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Patient_direct_naar_PICU">Patiënt direct (evt via SEH/OK) naar de PICU?</a></td><td>adm-sourcedirectpicu</td><td>ja/nee</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Herkomst_bij_opname_in_UMC">Herkomst bij opname in UMC</a></td><td>adm-sourcetypeid</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Afdeling_herkomst_buiten_eigen_UMC">Afdeling herkomst buiten eigen UMC</a></td><td>adm-admhospunitid</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Wie_voerder_het_transport_uit">Wie voerde het transport uit bij opname?</a></td><td>herk-tran-door</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Transportwijze">Transportwijze bij opname</a></td><td>adm-transport-adm</td><td>optie set</td><td>ja</td></tr><tr><td>UMC van herkomst</td><td>adm-sourcehospitalid-umc</td><td>optie set</td><td>ja</td></tr><tr><td>Ziekenhuis van herkomst</td><td>adm-sourcehospitalid</td><td>optie set</td><td>ja</td></tr><tr><td>Ziekenhuis van herkomst buitenland</td><td>adm-sourcehospitalid-bu</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Ontslag_datum_ziekenhuis">Ontslagdatum ziekenhuis</a></td><td>adm-hosp-disdate</td><td>datum en tijd</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Ontslag_UMC_direct_aansluitend_na_PICU">Ontslag UMC direct aansluitend na PICU?</a></td><td>adm-destdirectpicu</td><td>ja/nee</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Bestemming_na_ontslag_uit_UMC">Bestemming na ontslag uit UMC</a></td><td>adm-desttypeid</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Afdeling_bestemming_buiten_eigen_UMC">Afdeling bestemming buiten eigen UMC</a></td><td>adm-desthospunitid</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Wie_voerde_het_transport_uit">Wie voerde het transport uit bij ontslag?</a></td><td>bestm-tran-door</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Transportwijze">Transportwijze na ontslag</a></td><td>adm-transport-dis</td><td>optie set</td><td>ja</td></tr><tr><td>UMC van bestemming na ontslag IC</td><td>adm-desthospitalid-umc</td><td>optie set</td><td>ja</td></tr><tr><td>Ziekenhuis van bestemming na ontslag IC</td><td>adm-desthospitalid</td><td>optie set</td><td>ja</td></tr><tr><td>Ziekenhuis van bestemming na ontslag IC</td><td>adm-desthospitalid-bu</td><td>optie set</td><td>ja</td></tr></tbody></table><figcaption>Data set Ziekenhuis Episode</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Patientnummer</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Een uniek nummer voor een patiënt in het ziekenhuis van opname, ook wel 'patient-id' of 'patientnummer'</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Postcode</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Postcode van woonadres op moment van opname. Postcode in Nederland bestaat uit 4 cijfers en 2 letters. Buitenlandse postcodes toegestaan als geen Nederlandse BSN is ingevoerd (Land idcode=Onbekend) buitenlandse postcodes beginnen met beginletter(s) van land van herkomst, voorbeeld: België=B; Duitsland=D; Frankrijk=F; Groot Britannië=GB. Postcode wordt gebruikt voor bepaling adherentiegebied (eerste twee posities) en wijk (o.b.v. cbs-indeling eerste vier posities).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Opname datum ziekenhuis</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Opname datum (en tijdstip: uur) waarop de PICU patiënt in eigen UMC is opgenomen. Datum is verplicht, tijdstip alleen verplicht in uitzonderlijke geval dat patiënt op dezelfde dag meermaals is opgenomen.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Patient direct naar PICU</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Is de patiënt van buiten het eigen UMC direct (eventueel via de eigen SEH en/of OK) op de PICU opgenomen? Bij zulke ‘directe’ PICU-opnames moet ook de herkomst buiten het UMC worden geregistreerd en het Transport waarmee de patiënt naar de PICU/het eigen UMC is vervoerd. Bij PICU opnames die uit het eigen UMC afkomstig zijn wordt alleen de afdeling van het eigen UMC gevraagd waar de patiënt vandaan komt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Ontslag datum ziekenhuis</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Datum ontslag uit eigen UMC. Tijdstip is alleen verplicht in uitzonderlijke geval van meerdere ziekenhuis episodes op dezelfde dag.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Ontslag UMC direct aansluitend na PICU</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Na PICU ontslag volgt direct aansluitend het ontslag uit het eigen UMC. Dit verplicht dan de registratie van de <a href="https://pice.nl/?page_id=226#Bestemming_na_ontslag_uit_UMC">Bestemming na ontslag uit UMC</a>.&nbsp;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Optie sets voor Ziekenhuis Episode</h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Herkomst bij opname in UMC</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>Ander UMC</td></tr><tr><td>Ander ziekenhuis (Nederland)</td></tr><tr><td>Ander ziekenhuis (Buitenland)</td></tr><tr><td>Huis</td></tr><tr><td>Plaats van ongeval</td></tr><tr><td>Zorginstelling</td></tr><tr><td>Buitenland (overig)</td></tr><tr><td>Overig</td></tr><tr><td>Onbekend</td></tr></tbody></table><figcaption>Optie set Herkomst</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>De (directe) herkomst buiten het eigen UMC voorafgaand aan deze ziekenhuisopname (met een PICU episode). Verplicht als de (externe) PICU opname (eventueel via SEH en/of OK) direct/aansluitend volgt op de ziekenhuisopname.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Afdeling herkomst buiten eigen UMC</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>PICU (IC Kinderen)</td></tr><tr><td>NICU (IC Neonatologie)</td></tr><tr><td>Volwassen IC /CCU</td></tr><tr><td>(Zorg)Afdeling (zonder extra bewaking)</td></tr><tr><td>SEH</td></tr><tr><td>Recovery</td></tr><tr><td>Afdeling met extra bewaking (HDU/HighCare)</td></tr><tr><td>Kraamafdeling</td></tr><tr><td>Overig</td></tr><tr><td>OK</td></tr><tr><td>Longstay IC</td></tr><tr><td>Onbekend</td></tr></tbody></table><figcaption>Optie set Afdeling herkomst buiten eigen UMC</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Afdeling van ziekenhuis van herkomst van waar patiënt afkomstig is. Verplicht bij (directe/aansluitende) externe picu opnames.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Wie voerde het transport uit</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>Eigen UMC</td></tr><tr><td>Ander UMC</td></tr><tr><td>Niet UMC</td></tr><tr><td>Ziekenhuis buitenland</td></tr><tr><td>Onbekend</td></tr></tbody></table><figcaption>Optie set Wie voerde het transport uit</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading {"level":6} -->
+<h6>Opname transport</h6>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>De instantie die het transport verzorgt bij opname UMC met aansluitende PICU-opname. 'Eigen UMC' is uw UMC (de PICU die deze opname registreert). Niet-UMC betreft zowel algemene ziekenhuizen als niet-ziekenhuizen waaronder de GGD/RAV. De specialisatie van het transport team wordt vastgelegd in een ander veld: <a href="https://pice.nl/?page_id=226#Transportwijze">Transportwijze</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":6} -->
+<h6>Ontslag transport</h6>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Niet verplicht, hier kan de instantie die het transport verzorgt na ontslag uit PICU en (aansluitend) uit UMC worden vastgelegd. <em>Eigen UMC</em> is uw UMC (de PICU die deze opname registreert). <em>Niet UMC</em> betreft zowel algemene ziekenhuizen als niet-ziekenhuizen waaronder ook ouders. (Als dit wordt vastgelegd dan ook de specialisatie van het transport team vastleggen bij <a href="https://pice.nl/?page_id=226#Transportwijze">Transportwijze</a>)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Transportwijze</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>PICU team</td></tr><tr><td>NICU team</td></tr><tr><td>MICU team</td></tr><tr><td>PICU/NICU-team (vervallen optie per 15-5-2017)</td></tr><tr><td>MMT/Traumateam</td></tr><tr><td>Niet PICU/NICU specialist</td></tr><tr><td>GGD-Transport (zonder arts)</td></tr><tr><td>Niet (para-)medisch begeleid (bv: Ouders)</td></tr><tr><td>Onbekend</td></tr></tbody></table><figcaption>Optie set Transport wijze</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Type transport (specialisatie van het transport-team) waarmee patiënt bij opname naar het UMC/PICU is getransporteerd.&nbsp;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li><em>PICU team</em> = transport met een team van de PICU. Bij gebruik van de MICU door gespecialiseerd PICU-team hier voor de Transport-wijze 'PICU team' registreren.</li><li><em>NICU team</em> = transport met team van de NICU. Dus zonder arts van PICU.</li><li><em>Niet-PICU/NICU specialist</em> = transport met een (kinder)arts, zonder een IC-team.&nbsp;</li><li><em>MMT/Traumateam</em> = transport door Medisch Mobiel Team of Traumateam. </li><li><em>GGD Transport (zonder arts)</em> = standaard RAV/GGD ambulance zonder arts.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Bestemming na ontslag uit UMC</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>Ander UMC</td></tr><tr><td>Ander ziekenhuis (Nederland)</td></tr><tr><td>Ander ziekenhuis (buitenland)</td></tr><tr><td>Huis</td></tr><tr><td>Zorginstelling</td></tr><tr><td>Hospice (zonder IC)</td></tr><tr><td>Buitenland (overig)</td></tr><tr><td>Mortuarium</td></tr><tr><td>Overig</td></tr><tr><td>Onbekend</td></tr></tbody></table><figcaption>Optie set Bestemming na ontslag uit UMC</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Verplicht bij direct/aansluitend ontslag uit PICU, het gaat hier om de bestemming buiten het eigen UMC.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Afdeling bestemming buiten eigen UMC</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>(Zorg)Afdeling (zonder extra bewaking)</td></tr><tr><td>PICU (IC Kinderen)</td></tr><tr><td>NICU (IC Neonatologie)</td></tr><tr><td>Volwassen IC /CCU</td></tr><tr><td>Afdeling met extra bewaking (HDU/High Care)</td></tr><tr><td>Recovery</td></tr><tr><td>Overig</td></tr><tr><td>Kraamafdeling</td></tr><tr><td>Longstay IC</td></tr><tr><td>Mortuarium</td></tr><tr><td>Onbekend</td></tr></tbody></table><figcaption>Optie set Afdeling bestemming buiten eigen UMC</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Afdeling binnen het externe ziekenhuis waarheen de patiënt is ontslagen na de de laatste PICU episode binnen deze ziekehuis episode. Verplicht als <em>bestemming</em> een ziekenhuis is.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>PICU Episode</h3>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td><strong>LABEL</strong></td><td><strong>NAAM</strong></td><td><strong>TYPE</strong></td><td><strong>VERPLICHT</strong></td></tr><tr><td><strong>SECTIE</strong></td><td><strong>PICU opname kenmerken</strong></td><td><br></td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Lokaal_opname_nummer">Lokaal (voormalig) PICU opnamenummer</a></td><td>adm-ic-id</td><td>tekst</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Opname_datum_PICU">Opname datum PICU</a></td><td>adm-ic-admdate</td><td>datum en tijd</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Herkomst_afdeling_eigen_UMC">Herkomst afdeling eigen UMC</a></td><td>adm-sourceunitid</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Urgentie_van_de_opname">Urgentie van de opname</a></td><td>adm-typeid-urgentie</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Soort_opname">Soort opname</a></td><td>adm-typeid-soort</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Heropname_vanwege_dezelfde_problematiek">Heropname vanwege dezelfde problematiek?</a></td><td>adm-readmtypeid</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Verwijzend_specialisme">Verwijzend specialisme</a></td><td>adm-refspecialism</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Opname_indicatie">Opname indicatie</a></td><td>adm-indication</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Recovery">Recovery</a></td><td>recovery</td><td>ja/nee</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Canule">Canule</a></td><td>canule</td><td>ja/nee</td><td>ja</td></tr><tr><td>Lengte (centimeters)</td><td>adm-length</td><td>decimaal getal</td><td><br></td></tr><tr><td>Gewicht (kilogram)</td><td>gewicht</td><td>decimaal getal</td><td><br></td></tr><tr><td><strong>SECTIE</strong></td><td><strong>PIM &amp; PRISM fysiologie/lab</strong></td><td><br></td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Locatie_eerste_bepaling_PIM_score">Locatie eerste bepaling PIM score</a></td><td>adm-pimloc</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Systolische_bloeddruk_eerste_in_1e_uur">Systolische bloeddruk eerste in 1e uur</a> (mmHg)</td><td>sbp-0</td><td>geheel getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#PaO2_eerste_in_1e_uur">PaO2 eerste in 1e uur</a> (kPa)</td><td>pao2-0</td><td>decimaal getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#FiO2_bij_de_eerste_PaO2_in_1e_uur">FiO2 bij de eerste PaO2 in 1e uur</a></td><td>fio2-0</td><td>decimaal getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#SpO2_eerste_in_1e_uur">SpO2 eerste in 1e uur</a></td><td>spo2-0</td><td>geheel getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#FiO2_bij_de_eerste_SpO2_in_1e_uur">FiO2 bij de eerste SpO2 in 1e uur</a></td><td>fio2sat-0</td><td>decimaal getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Base_excess_eerste_in_1e_uur">Base excess eerste in 1e uur</a> (mmol/L)</td><td>be-0</td><td>decimaal getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Lactaat_eerste_in_1e_uur">Lactaat eerste in 1e uur</a> (mmol/L)</td><td>lactaat0</td><td>decimaal getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Continue_reanimatie_in_eerste_12_uur_op_PICU">Continue reanimatie eerste 12 uur op PICU</a></td><td>contrean12</td><td>ja/nee</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Systolische_bloeddruk_minimum_eerste_12_uur">Systolische bloeddruk minimum eerste 12 uur</a> (mmHg)</td><td>sbp-min12</td><td>geheel getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Polsfrequentie_maximum_eerste_12_uur">Polsfrequentie maximum eerste 12 uur</a> (per minuut)</td><td>hr-max12</td><td>geheel getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Temperatuur_eerste_12_uur">Temperatuur minimum eerste 12 uur</a> (in ºC)</td><td>t-min12</td><td>decimaal getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Temperatuur_eerste_12_uur">Temperatuur maximum eerste 12 uur</a> (in ºC)</td><td>t-max12</td><td>decimaal getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#pH_eerste_12_uur">pH minimum eerste 12 uur</a></td><td>ph-min12</td><td>decimaal getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#pH_eerste_12_uur">pH maximum eerste 12 uur</a></td><td>ph-max12</td><td>decimaal getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#pCO2_maximum_eerste_12_uur">pCO2 maximum eerste 12 uur</a> (kPa)</td><td>paco2-max12</td><td>decimaal getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#PaO2_minimum_eerste_12_uur">PaO2 minimum eerste 12 uur</a> (kPa)</td><td>pao2p3-12</td><td>decimaal getal</td><td><br></td></tr><tr><td>Bicarbonaat minimum eerste 12 uur (mmol/L)</td><td>bicarbonate-min12</td><td>decimaal getal</td><td><br></td></tr><tr><td>Bicarbonaat maximum eerste 12 uur (mmol/L)</td><td>bicarbonate-max12</td><td>decimaal getal</td><td><br></td></tr><tr><td>Glucose maximum eerste 12 uur (mmol/L)</td><td>glucose-max12</td><td>decimaal getal</td><td><br></td></tr><tr><td>Kalium maximum eerste 12 uur (mmol/L)</td><td>k-max12</td><td>decimaal getal</td><td><br></td></tr><tr><td>Kreatinine maximum eerste 12 uur (μmol/L)</td><td>creatinine-max12</td><td>geheel getal</td><td><br></td></tr><tr><td>Ureum maximum eerste 12 uur (mmol/L)</td><td>ureum-max12</td><td>decimaal getal</td><td><br></td></tr><tr><td>Leukocyten minimum eerste 12 uur (10<sup>9</sup>/L)</td><td>leuco-min12</td><td>decimaal getal</td><td><br></td></tr><tr><td>Trombocyten minimum eerste 12 uur (10<sup>9</sup>/L)</td><td>thrombo-min12</td><td>geheel getal</td><td><br></td></tr><tr><td>PT maximum eerste 12 uur (seconden)</td><td>pt-max12</td><td>decimaal getal</td><td><br></td></tr><tr><td>aPTT maximum eerste 12 uur (seconden)</td><td>ptt-max12</td><td>decimaal getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Akkoord_met_gebruik_van_bovenstaande_waarden">Akkoord met gebruik van bovenstaande waarden</a></td><td>adm-ppvalidator</td><td>ja/nee</td><td>ja</td></tr><tr><td><strong>SECTIE</strong></td><td><strong>PIM &amp; PRISM pupil reactie en EMV</strong></td><td><br></td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Pupilreactie_in_1e_uur_beide_gefixeerd_en_verwijd">Pupilreactie in 1e uur beide gefixeerd en verwijd</a></td><td>admpupils</td><td>ja/nee</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#EMV_Openen_van_de_ogen">EMV Openen van de ogen</a></td><td>e-emv</td><td>optie set</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#EMV_Motorische_reactie">EMV Beste motorische reactie</a></td><td>m-emv</td><td>optie set</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#EMV_Motorische_reactie">EMV Beste verbale reactie</a></td><td>v-emv</td><td>optie set</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#EMV_bij_opname_PICU">EMV bij opname PICU</a></td><td>emv</td><td>geheel getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Slechtste_pupilreactie_in_eerste_12_uur">Slechtste </a><a href="https://pice.nl/?page_id=226#Slechtste_pupil_reactie_in_eerste_12_uur">pupil reactie</a><a href="https://pice.nl/?page_id=226#Slechtste_pupilreactie_in_eerste_12_uur"> in eerste 12 uur</a></td><td>pupreaction3-12</td><td>optie set</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#EMV_Openen_van_de_ogen">EMV Openen van de ogen</a></td><td>e-emv12</td><td>optie set</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#EMV_Motorische_reactie">EMV Motorische reactie</a></td><td>m-emv12</td><td>optie set</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#EMV_Verbale_reactie">EMV Verbale reactie</a></td><td>v-emv12</td><td>optie set</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Slechtse_EMV_in_eerste_12_uur">Slechtste EMV in eerste 12 uur</a></td><td>emv12</td><td>geheel getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Akkoord_met_gebruik_van_bovenstaande_waarden">Akkoord met gebruik van bovenstaande waarden</a></td><td>adm-pupilemvppvalidator</td><td>ja/nee</td><td>ja</td></tr><tr><td><strong>SECTIE</strong></td><td><strong>PIM &amp; PRISM risicodiagnoses</strong></td><td><br></td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Risicodiagnose_als_hoofdreden_opname">Risicodiagnose als hoofdreden opname</a></td><td>risicodiag-hoofd</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Beademd_in_1e_uur">Beademd in 1e uur</a></td><td>ventilated</td><td>ja/nee</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Cardiopulmonale_bypass">Cardiopulmonale bypass</a></td><td>bypass</td><td>ja/nee</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#CPR_voor_opname">CPR in eigen ziekenhuis vóór PICU opname</a></td><td>cprprepicu-riskpim</td><td>ja/nee</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#CPR_voor_opname">CPR vóór opname in eigen ziekenhuis</a></td><td>cprprehosp-riskpim</td><td>ja/nee</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Leukemie_of_lymfoom_na_1e_inductie_kuur">Leukemie of lymfoom na 1e inductie kuur</a></td><td>leukemie-riskpim</td><td>ja/nee</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Beenmergtransplantatie">Beenmergtransplantatie</a></td><td>bmtrecipient-riskpim</td><td>ja/nee</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Spontane_hersenbloeding">Spontane hersenbloeding</a> </td><td>sponthersenbl-riskpim</td><td>ja/nee</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Cardiomyopathiemyocarditis">Cardiomyopathie/myocarditis</a></td><td>cardmyopath-riskpim</td><td>ja/nee</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Hypoplastisch_Linker_Hart_Syndroom">Hypoplastisch Linker Hart Syndroom</a></td><td>hypoplast-riskpim</td><td>ja/nee</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Septische_shock">Septische shock</a></td><td>septische-shock</td><td>ja/nee</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Severe_Combined_Immune_Deficiency">Severe Combined Immune Deficiency</a></td><td>scid-riskpim</td><td>ja/nee</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Neurodegeneratieve_stoornis">Neurodegeneratieve stoornis</a></td><td>neurodegen-riskpim</td><td>ja/nee</td><td>ja</td></tr><tr><td>HIV</td><td>hiv-riskpim</td><td>ja/nee</td><td>ja</td></tr><tr><td>Chromosomale afwijking</td><td>chromosomal</td><td>ja/nee</td><td>ja</td></tr><tr><td>Maligniteit</td><td>cancer</td><td>ja/nee</td><td>ja</td></tr><tr><td><strong>SECTIE</strong></td><td><strong>Beademing- en katheterdagen</strong></td><td><br></td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Katheterdagen_veneus">Katheterdagen veneus</a></td><td>adm-catheterdays</td><td>geheel getal</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Beademingsregistratie">Beademingsregistratie</a></td><td>beademingsinvoer</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Aantal_dagen_invasieve_beademing">Aantal dagen invasieve beademing</a></td><td>adm-ventilationdaysin</td><td>geheel getal</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Aantal_dagen_non-invasieve_beademing">Aantal dagen non-invasieve beademing</a></td><td>adm-ventilationdaysni</td><td>geheel getal</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Totaal_aantal_dagen_non-_en_invasieve_beademing">Totaal aantal dagen non- en invasieve beademing</a></td><td>adm-ventilationdays</td><td>geheel getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Aantal_dagen_overige_ademhalingsondersteuning">Aantal dagen overige ademhalingsondersteuning</a></td><td>adm-ventilationdaysother</td><td>geheel getal</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Uren_invasieve_beademing">Uren invasieve beademing</a></td><td>adm-ventilationhoursin</td><td>geheel getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Uren_non-invasieve_beademing">Uren non-invasieve beademing</a></td><td>adm-ventilationhoursni</td><td>geheel getal</td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Uren_overige_ademondersteuning_beademing">Uren overige ademondersteuning beademing</a></td><td>adm-ventilationhoursother</td><td>geheel getal</td><td><br></td></tr><tr><td><strong>SECTIE</strong></td><td><strong>Diagnoses</strong></td><td><br></td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Voornaamste_PICU_diagnoses">Voornaamste PICU diagnose</a></td><td>diagnose1</td><td><a href="https://pice.nl/?page_id=226#PICU_diagnoses">optie set</a></td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Voornaamste_onderliggende_diagnose">Voornaamste onderliggende diagnose</a></td><td>diagnose2</td><td><a href="https://pice.nl/?page_id=226#PICU_diagnoses">optie set</a></td><td>ja</td></tr><tr><td><strong>SECTIE</strong></td><td><strong>PICU ontslag kenmerken</strong></td><td><br></td><td><br></td></tr><tr><td><a href="https://pice.nl/?page_id=226#Ontslagdatum_PICU">Ontslagdatum PICU</a></td><td>adm-ic-disdate</td><td>datum en tijd</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Reden_voor_ontslag">Reden voor ontslag</a></td><td>adm-disreasonid</td><td>optie set</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Het_ontslag_van_de_PICU_uitgesteld_vanwege_capaciteitstekort_in_het_vervolgtraject">Ontslag van de PICU uitgesteld vanwege capaciteitstekort in het vervolgtraject</a></td><td>adm-disdelayed</td><td>ja/nee</td><td><br></td></tr><tr><td>Dagen uitstel</td><td>adm-disdelaydays</td><td>geheel getal</td><td>ja</td></tr><tr><td><a href="https://pice.nl/?page_id=226#Bestemming_afdeling_eigen_UMC_na_ontslag_PICU">Bestemming afdeling eigen UMC na ontslag PICU</a></td><td>adm-destunitid</td><td>optie set</td><td>ja</td></tr></tbody></table><figcaption>Data set PICU Episode</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading {"level":4} -->
+<h4>PICU opname kenmerken</h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Lokaal opname nummer</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Lokaal opnamenummer (oude registratie click), toegekend in lokale database bij eerste invoer opname-record.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Opname datum PICU</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Pas vanaf het moment dat de patiënt fysiek de PICU binnenkomt is er sprake van een opname, dus niet het moment dat de patiënt wordt ingeschreven of aangekondigd.&nbsp; Vaak is de eerst geregistreerde hartfrequentie de start van de PICU opname.&nbsp;Bij overname uit andere PICU hier dus overname datum (=opname datum in eigen PICU) en tijdstip vermelden. Tijd volgens 24-uurs systeem. Een nieuwe dag begint om 00:00 uur. Indien alleen de hele uren bekend zijn laat dan de minuten op :00 staan. Als patiënt in eerste uur van de nacht wordt opgenomen noteer dan tijdstip &gt; 00:00. Gebruik 00:01 als de patiënt echt middernacht wordt opgenomen om verwarring met missing value = 00 te voorkomen.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Recovery</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><em>Recovery</em> (na chirurgie of procedure) is de hoofdreden van deze opname (onderdeel van de PIM). Algemene regel: als de patiënt zonder de voorafgaande ingreep/procedure nu niet zou zijn opgenomen op de PICU dan spreken we van een 'recovery'.<br><span class="has-inline-color has-vivid-cyan-blue-color">ANZPIC: The main reason for admission to your unit was for recovery from surgery or a procedure. Include admission when the patient has undergone a surgical procedure, or has received anaesthetic for a procedure within the theatre or recovery area, immediately prior to admission to your unit.<br>This includes admission following a radiological procedure or insertion of cardiac catheter<br>Do not include patients admitted from theatre where recovery from surgery or anaesthetic is not the main reason for the ICU admission. (eg. a patient with a head injury who is admitted from theatre after insertion of an ICP monitor; in this patient the main reason for ICU admission is the head injury).</span></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Canule</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Patiënt met tracheacanule (reeds bij opname).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4><strong>PIM &amp; PRISM fysiologie/lab</strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Systolische bloeddruk eerste in 1e uur</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Onderdeel PIM (1e contact PICU binnen 1 uur). Als patiënt in shock is, met een bloeddruk zo laag dat deze niet goed meetbaar is, noteer dan 30 mmHg en bij reanimatie noteer 0 mmHg.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>PaO2 eerste in 1e uur</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Eerst gemeten arteriële paO2 (kPa) in 1e uur (samen met bij behorende FiO2).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>FiO2 bij de eerste PaO2 in 1e uur</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Alleen als de FiO2 accuraat gemeten kan worden. Behoort bij de eerst gemeten arteriële PaO2 in 1e uur.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>SpO2 eerste in 1e uur</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Eerste gemeten zuurstofsaturatie (%) via pulse-oximeter in 1e uur.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>FiO2 bij de eerste SpO2 in 1e uur</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Alleen als FiO2 accuraat gemeten kan worden, behoort bij de eerst gemeten zuurstofsaturatie (spO2) in 1e uur.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Base excess eerste in 1e uur</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Arterieel, capillair of veneus.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Lactaat eerste in 1e uur</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Uitsluitend arterieel of veneus.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Continue reanimatie in eerste 12 uur op PICU</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Als er in de eerste 12 uur op de PICU nooit meer dan 2 uur achtereen stabiele vitale waarden worden bereikt, dan kunnen die waarden niet worden gebruikt in de PRISM3 score.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Systolische bloeddruk minimum eerste 12 uur</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Gebruik geen data vergaard tijdens huilen of andere situaties die de basale status beïnvloeden. Als zowel de arteriële bloeddruk als de NIBD gemeten bloeddruk beschikbaar zijn, gebruik dan de arteriële bloeddruk (voor zover de arterielijn betrouwbaar is). Tijdens reanimatie met hartmassage, zonder of afwezige bloeddruk meting, noteer de systolische bloeddruk als 0 mmHg. Indien de patiënt een reanimatie ondergaat,&nbsp; gebruik dan de meest abnormale (minimale) waardes. Over het algemeen is er een ‘echte reanimatie situatie’ indien meer dan 30 seconden hartmassage nodig is.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Polsfrequentie maximum eerste 12 uur</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Gebruik geen data vergaard tijdens huilen of andere situaties die de basale status beïnvloeden. Indien er een asystolie is, noteer dan een hartactie van 0. Indien de patiënt een reanimatie ondergaat,&nbsp; gebruik dan de meest abnormale (maximale) waardes. Over het algemeen is er een ‘echte reanimatie situatie’ indien meer dan 30 seconden hartmassage nodig is.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Temperatuur eerste 12 uur</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Minimum en maximum temperatuur. Gebruik geen huidtemperatuur! Gebruik geen data vergaard tijdens huilen of andere situaties die de basale status beïnvloeden.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>pH eerste 12 uur</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Minimum en maximum pH. Zowel arteriele, capillaire als veneuze waarden kunnen gebruikt worden.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>pCO2 maximum eerste 12 uur</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Arteriële, capillaire en veneuze waarden kunnen worden gebruikt. De gemeten pCO2 gedurende een hersendood apnoe test dient niet te worden gebruikt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>PaO2 minimum eerste 12 uur</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Dit betreft de minimum arteriële paO2 in eerste 12 uur op de PICU, en is onafhankelijk van de PaO2-FiO2 ratio.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Akkoord met gebruik van bovenstaande waarden</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Indien 1 of meer van bovenstaande waarden een waarschuwing geeft omdat de waarde buiten de gebruikelijke range valt, kan hier worden aangegeven dat dit gezien en akkoord bevonden is. Geeft tevens aan dat ingevoerde waarden uitgezonderd onmogelijke waarden), gebruikt kunnen worden volgens geldende richtlijnen bij berekening PIM en/of PRISM scores.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>PIM &amp; PRISM pupil reactie en EMV</h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Pupilreactie in 1e uur beide gefixeerd en verwijd</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Scoren indien in 1e uur na opname PICU twee pupillen gefixeerd en verwijd zijn. Verwijding moet &gt; 3 mm zijn en pupillen moeten niet reageren op licht.&nbsp; Niet veroorzaakt door medicatie, toxinen (drugs) of een directe verwonding of proces aan het oog.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>EMV bij opname PICU</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Beste EMV (GCS) score van patiënt gemeten direct bij opname. Overeenkomstig Nederlandstalig APLS (Turner 2005). </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Bij asymmetrie wordt de beste zijde gescoord.</li><li>Anesthesie- en sedatie effecten mogen niet gescoord worden. Een patiënt die direct postoperatief op de IC wordt opgenomen, maar nog onder anesthesie verkeert heeft een maximale score, tenzij bij die patiënt preoperatief het bewustzijn al was verminderd. Deze patiënt wordt opgenomen met in principe dezelfde GCS als preoperatief.</li><li>Als de patiënt wakker was en nu wordt gesedeerd, schat dan de score. Een V-tube geeft niet automatisch een lage score tenzij gedocumenteerd dat verbale reactie reeds vóór de tube verminderd was (niet vanwege sedatie). Chronisch “coma” of chronisch afwijkend bewustzijn wordt niet gescoord.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Slechtste pupil reactie in eerste 12 uur</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Slechtste pupilreactie in de eerste 12 uur: één of beiden gefixeerd en verwijd. Verwijde pupil indien &gt; 3 mm. Kleine gefixeerde pupillen (pinpoint pupils) worden niet gescoord. Ook indien pupillen iatrogeen afwijkend zijn dient dit niet gescoord te worden, net zoals chronisch reeds bestaande pupil afwijkingen.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Slechtste EMV in eerste 12 uur.</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Slechtste EMV samen op hetzelfde moment gemeten in de eerste 12 uur op de PICU. Na anesthesie, sedatie of verslapping gebruik alleen de scores minimaal 2 uur later. Indien de patiënt gedurende gehele PICU periode is gesedeerd en/of verslapt, neem dan de meest recente accurate inschatting voor opname op de PICU (b.v. de bevindingen op de SEH voordat de patiënt naar de PICU werd gebracht). Gebruik alleen de inschatting indien er daadwerkelijk sprake kan zijn van een gestoord bewustzijn bij een patiënt met een bekend acute centraal zenuwstelsel letsel of aandoening, of een aandoening die centraal zenuwstelsel gevolgen kan hebben (zoals hypoxie en/of hypotensie). Chronisch coma of reeds bestaand bekend afwijkend bewustzijn wordt niet gescoord.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>PIM en PRISM risico diagnoses</h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Beademd in 1e uur</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Daaronder valt ook alle <span class="has-inline-color has-vivid-red-color">non-invasieve en overige beademingsvormen (klopt dit?)</span> zoals <span class="has-inline-color has-black-color">nasale CPAP </span>of BiPAP. Negatieve druk beademing geldt eveneens als beademing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Cardiopulmonale bypass</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Opname op de PICU aansluitend op <em>Cardiopulomonale bypass</em>, daarbij wordt ook <em>Recovery</em> gescoord.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Risico diagnose overzicht tabel</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Voor de PIM-2, PIM-3 en PRISM-IV gelden een set van risico diagnoses, die deels per score systeem overlappen en een onderlinge samenhang kunnen hebben.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>Risico</td><td>Diagnose</td><td>Type</td><td>PIM-2</td><td>PIM-3</td><td>PRISM-IV</td></tr><tr><td>Laag</td><td>Acute Diabetes</td><td>optie set</td><td>x</td><td>x</td><td><br></td></tr><tr><td>Laag</td><td>Astma</td><td>optie set</td><td>x</td><td>x</td><td><br></td></tr><tr><td>Laag</td><td>Bronchiolitis</td><td>optie set</td><td>x</td><td>x</td><td><br></td></tr><tr><td>Laag</td><td>Convulsies</td><td>optie set</td><td><br></td><td>x</td><td><br></td></tr><tr><td>Laag</td><td>Diabetische ketoacidose</td><td>optie set</td><td>x</td><td>x</td><td><br></td></tr><tr><td>Laag</td><td>Endocrien, hematologisch, spier/zenuwstelsel, of nefrologisch</td><td>optie set</td><td><br></td><td><br></td><td>x</td></tr><tr><td>Laag</td><td>Obstructieve Slaap Apnoe Syndroom</td><td>optie set</td><td>x</td><td>x</td><td><br></td></tr><tr><td>Laag</td><td>Pseudokroek</td><td>optie set</td><td>x</td><td>x</td><td><br></td></tr><tr><td>Hoog</td><td>Cardiomyopathie/myocarditis</td><td>ja/nee</td><td>x</td><td>x</td><td><br></td></tr><tr><td>Hoog</td><td>CPR in eigen ziekenhuis vóór PICU opname</td><td>ja/nee</td><td>x</td><td><br></td><td>x</td></tr><tr><td>Hoog</td><td>CPR vóór opname in eigen ziekenhuis</td><td>ja/nee</td><td>x</td><td><br></td><td>x</td></tr><tr><td>Hoog</td><td>HIV</td><td>ja/nee</td><td>x</td><td><br></td><td><br></td></tr><tr><td>Hoog</td><td>Hypoplastisch Linker Hart Syndroom</td><td>ja/nee</td><td>x</td><td>x</td><td><br></td></tr><tr><td>Hoog</td><td>Maligniteit</td><td>ja/nee</td><td><br></td><td><br></td><td>x</td></tr><tr><td>Hoog</td><td>Leukemie of lymfoom na 1e inductie kuur</td><td>ja/nee</td><td>x</td><td><br></td><td><br></td></tr><tr><td>Hoog</td><td>Leverfalen, exclusief opnames na recovery levertransplantatie</td><td>optie set</td><td>x</td><td><br></td><td><br></td></tr><tr><td>Hoog</td><td>Leverfalen, incl levertransplantatie (ook met ‘Recovery’)</td><td>optie set</td><td>x</td><td><br></td><td><br></td></tr><tr><td>Hoog</td><td>Necrotiserende enterocolitis</td><td>optie set</td><td><br></td><td>x</td><td><br></td></tr><tr><td>Hoog</td><td>Neurodegeneratieve stoornis</td><td>optie set</td><td>x</td><td>x</td><td><br></td></tr><tr><td>Hoog</td><td>Niet-operatieve cardiovasculaire aandoeningen</td><td>optie set</td><td><br></td><td>x</td><td><br></td></tr><tr><td>Hoog</td><td>Severe Combined Immune Deficiency</td><td>optie set</td><td>x</td><td><br></td><td><br></td></tr><tr><td>Hoog</td><td>Spontane hersenbloeding</td><td>ja/nee</td><td>x</td><td>x</td><td><br></td></tr><tr><td>Erg hoog</td><td>Beenmergtransplantatie (ontvanger)</td><td>ja/nee</td><td><br></td><td>x</td><td><br></td></tr><tr><td>Erg hoog</td><td>CPR in eigen ziekenhuis vóór PICU opname</td><td>optie set</td><td><br></td><td>x</td><td><br></td></tr><tr><td>Erg hoog</td><td>CPR vóór opname in eigen ziekenhuis</td><td>optie set</td><td><br></td><td>x</td><td><br></td></tr><tr><td>Erg hoog</td><td>Leukemie of lymfoom na 1e inductie kuur</td><td>optie set</td><td><br></td><td>x</td><td><br></td></tr><tr><td>Erg hoog</td><td>Leverfalen, exclusief opnames na recovery levertransplantatie</td><td>optie set</td><td><br></td><td>x</td><td><br></td></tr><tr><td>Erg hoog</td><td>Severe Combined Immune Deficiency</td><td>ja/nee</td><td><br></td><td>x</td><td><br></td></tr></tbody></table><figcaption>PIM en PRISM risico diagnoses</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Een gedeelte van de diagnoses wordt gescoord als ja/nee (zie hieronder). De rest is een keuze uit een de de optie set <a href="https://pice.nl/?page_id=226#Risicodiagnose_als_hoofdreden_opname">Risico diagnose als hoofdreden opname</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>CPR vóór opname</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>CPR vóór PICU opname, kan zowel in (<em>CPR in eigen ziekenhuis vóór PICU opname</em>) als buiten het ziekenhuis (<em>CPR vóór opname in eigen ziekenhuis</em>) zijn geweest maar wel gerelateerd aan deze opname. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><span class="has-inline-color has-vivid-cyan-blue-color">ANZPIC: Identifies whether or not the child received cardiopulmonary resuscitation prior to admission to your unit regardless of whom it was given by. Includes both in-hospital and out-of-hospital arrest.Requires either documented absent pulse or the requirement for external cardiac massage for a period of 30 seconds or longer. Precordial thumps or defibrillation without cardiac massage should not be included. Do not include past history of cardiac arrest.</span></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Leukemie of lymfoom na 1e inductie kuur</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Patiënten met leukemie of lymfoom die hun inductie kuur hebben gehad al of niet in neutropenie of in remissie. De opname moet dan wel gerelateerd zijn aan de leukemie of lymfoom. Indien de patiënt voor een geheel ander probleem is opgenomen (b.v. trauma) wordt deze hoog risico diagnose niet gescoord.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Beenmergtransplantatie</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>De patiënt heeft een beenmergtransplantatie ondergaan direct voor (tijdens dezelfde ziekenhuis opname als de PICU opname) of tijdens de PICU opname.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Spontane hersenbloeding</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Spontane hersenbloeding, niet score als deze geassocieerd is met een neurotrauma of niet intracerebraal is, zoals een subduraal hematoom.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Cardiomyopathie/myocarditis</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Niet scoren in geval van hartfalen bij sepsis of na hartchirurgie.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Hypoplastisch Linker Hart Syndroom</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Geldt voor elke leeftijd bij opname. Maar alleen als een Norwood of soortgelijke procedure is uitgevoerd in de neonatale periode. Na een harttransplantatie vervalt deze risico score.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Septische shock</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Volgens definities International Pediatric Sepsis Consensus Conference, 2002.<br><span class="has-inline-color has-vivid-cyan-blue-color">Requires the presence of the systemic inflammatory response syndrome (SIRS) and suspected or proven infection and cardiovascular organ dysfunction</span>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>N.B. geldt niet primair als een PIM of PRISM risico diagnose.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Severe Combined Immune Deficiency</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Severe Combined Imune Deficiency (SCID) wordt ook gescoord na succesvolle beenmergtransplantatie en (gedeeltelijk) herstel van immuunfunctie.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Neurodegeneratieve stoornis</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Alleen scoren als het een progressieve aandoening betreft of indien dit in de toekomst gaat lijden tot progressie, zoals b.v. leukodystrofiën. Dus niet een stabiele psychomotore retardatie. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><span class="has-inline-color has-vivid-red-color">N.B. Hier nog een uitputtende lijst van maken van mogelijke neurodegeneratieve stoornissen.</span></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Beademing- en katheterdagen</h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Katheterdagen veneus</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Het aantal dagen dat er sprake was van een veneuze katheter. Ook een gedeelte van een dag telt mee als hele dag. Wordt gebruikt bij berekening ratio lijninfecties/katheterdagen. Bij meerdere centrale lijnen dient men het aantal katheterdagen bij elkaar op te tellen.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Aantal dagen invasieve beademing</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Beademingsdag invasief: beademingdag via endotracheale tube, tracheostoma of larynxmasker. Ook een gedeelte van een dag telt mee als hele dag. Indien op dezelfde dag invasieve en non-invasieve beademing dan alleen de invasieve beademing registreren. (Let op: niet het beademingsapparaat maar de toediening bepaalt of het invasieve beademing betreft)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Aantal dagen non-invasieve beademing</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Beademingsdag non invasief: dag met beademing via een masker waarbij het ademminuutvolume kan worden gemeten (dus niet CPAP) en waarop niet invasief is beademd. <strong>Let op</strong> non-invasief kan ook via het beademingsapparaat dat normaal voor invasieve beademing wordt gebruikt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Totaal aantal dagen non- en invasieve beademing</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Beademingsdagen: het aantal (kalender)dagen waarop de patiënt is beademd tijdens de PICU opname. Ieder gedeelte van de dag telt mee als beademingsdag. Alleen beademingsvormen waarbij het ademminuutvolume kan worden gemeten (inclusief HFO). <strong>Let op</strong>: zwaarste beademingsvorm van de dag telt (indien zowel invasieve en non-invasieve beademing op dezelfde dag, dan die dag alleen de invasieve beademingsdag tellen dus niet twee dagen).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Aantal dagen overige ademhalingsondersteuning</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Ademhalingsondersteuning waarbij ademminuutvolume niet gemeten kan worden, zoals Infant flow, Optiflow, CPAP.<br><strong>Let op</strong>: non rebreathing masker en neusbril vallen hier niet onder! Telt alleen mee voor dagen waarop geen non-/invasieve beademingsdagen zijn genoteerd.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Uren invasieve beademing</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Niet verplichte registratie bij kortdurende invasieve beademing (om te voorkomen dat bijvoorbeeld korte beademing van enkele uren alleen vanwege de verdeling over 2 kalenderdagen ook 2 volle beademingsdagen oplevert). </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Invasieve beademing: beademing via endotracheale tube, tracheostoma of larynxmasker.<br><strong>Let op</strong>: niet het beademingsapparaat maar de toediening bepaalt of het invasieve beademing betreft.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Uren non-invasieve beademing</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Niet verplichte registratie bij kortdurende non-invasieve beademing (om te voorkomen dat korte beademing van enkele uren alleen vanwege de verdeling over 2 kalenderdagen ook 2 volle beademingsdagen oplevert). </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Non invasieve beademing: beademing via een masker waarbij het ademminuutvolume kan worden gemeten en niet invasief wordt beademd. <strong>Let op</strong>: non-invasief kan ook via het beademingsapparaat dat normaal voor invasieve beademing wordt gebruikt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Uren overige ademondersteuning beademing</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Niet verplichte registratie bij kortdurende ademondersteuning (bijvoorbeeld: 2 uur durende ademondersteuning kan bij registratie in kalenderdagen twee dagen tellen). </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Ademhalingsondersteuning waarbij ademminuutvolume niet gemeten kan worden, zoals Infant flow, Optiflow, CPAP.<br><strong>Let op</strong>: non rebreathing masker en neusbril vallen hier niet onder!</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4><strong>Diagnoses</strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Voornaamste PICU diagnose</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>De voornaamste PICU diagnose (<a href="https://pice.nl/?page_id=226#PICU_diagnoses">zie betreffende optie set</a>) is de directe en belangrijkste oorzaak voor opname op de PICU.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Voor postoperatieve patiënten moet de <em>Voornaamste PICU diagnose</em> een 'Post Procedurele Diagnose' zijn.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Infecties, trauma mechanismen en specifieke IC-Procedures kunnen nooit als Voornaamste PICU Diagnose worden geselecteerd. Deze moeten bij de “Bijkomende Diagnoses” worden ingevuld.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Als tijdens de opname nieuwe informatie (test uitslag) beschikbaar is die betere codering mogelijk maakt moet wel in de gaten worden gehouden dat hier nog steeds de meest direct verantwoordelijke diagnose voor IC opname wordt ingevuld.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Voornaamste onderliggende diagnose</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>De voornaamste onderliggende diagnose die de reden was voor opname op de PICU.<br>Bv. ex prematuur met BPD en bronchiolitis: <em>Voornaamste onderliggende diagnose</em> = prematuriteit.<br><strong>Let op</strong>: de <em>Voornaamste onderliggende diagnose</em> kan gelijk zijn aan <em>Voornaamste PICU diagnose</em> (b.v. meningitis bij een voorheen gezond kind). Noteer in dat geval dezelfde diagnose voor beide velden.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4><strong>PICU ontslag kenmerken</strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Ontslagdatum PICU</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Het moment waarop de patiënt van de PICU is ontslagen. Tijdstip in 24-uurs notatie.<br>Bij overlijden tijdens PICU-episode het tijdstip van overlijden noteren, niet het tijdstip waarop het lichaam van de PICU is verwijderd naar mortuarium of OK bij orgaan-procedure. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Ontslag van de PICU uitgesteld vanwege capaciteitstekort in het vervolgtraject</h5>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Alleen als het uitstel meer dan 12 uur bedroeg. Indien ontslag van PICU is uitgesteld ook het aantal dagen uitstel invullen.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Opie sets voor PICU Episode</h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Herkomst afdeling eigen UMC</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>Directe opname van buiten eigen UMC</td></tr><tr><td>Volwassen IC /CCU</td></tr><tr><td>Zorgafdeling via OK</td></tr><tr><td>(Zorg)Afdeling (zonder extra bewaking)</td></tr><tr><td>SEH via OK</td></tr><tr><td>SEH</td></tr><tr><td>Recovery</td></tr><tr><td>Afdeling met extra bewaking (HDU/HighCare)</td></tr><tr><td>Kraamafdeling</td></tr><tr><td>Overig</td></tr><tr><td>OK</td></tr><tr><td>Longstay IC</td></tr><tr><td>NICU (IC Neonatologie)</td></tr><tr><td>Onbekend</td></tr></tbody></table><figcaption>Optie set Herkomst afdeling eigen UMC</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>De afdeling in het eigen UMC waar de patiënt vandaan komt. Als de patiënt direct na ziekenhuisopname op de PICU wordt opgenomen kan hier gekozen worden voor: <em>Directe opname van buiten eigen UMC</em>; en als de patiënt eerst via de eigen SEH en/of OK ging: <em>SEH</em> of <em>SEH via OK</em>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Urgentie van de opname</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>Ongeplande opname</td></tr><tr><td>Geplande opname</td></tr></tbody></table><figcaption>Optie set Urgentie van de opname</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:list -->
+<ul><li><em>Geplande opname</em> is een van tevoren afgesproken opname op de PICU. Bijvoorbeeld na electieve chirurgie, voor een IC-procedure, voor bewaakte observatie of een electieve opname van een thuis-beademings patiënt. <em>Geplande opnames</em> komen overeen met 'electieve' opnames in de PIM: <span class="has-inline-color has-vivid-cyan-blue-color">An ICU admission or an operation is considered elective if it could be postponed for more than 6 hours without adverse effect</span>. (Electieve opnames worden niet apart apart geregistreerd voor de PIM, daarvoor wordt dit veld <em>Urgentie van opname </em>gebruikt).</li><li><em>Ongeplande opname</em> betreft alle niet geplande opnames.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Soort opname</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>Medisch</td></tr><tr><td>Chirurgisch</td></tr><tr><td>Vóór opname reeds overleden</td></tr></tbody></table><figcaption>Optie set Soort opname</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Chirurgische opnames betreffen postoperatieve patienten, recovery patienten, en ook preoperatieve opnames. Als de preoperatieve opname ook zonder de geplande chirurgie op de PICU zou zijn opgenomen betreft het een <em>Medische</em> opname en niet een chirurgische opname.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Heropname vanwege dezelfde problematiek</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>Andere problematiek dan voorgaande opname</td></tr><tr><td>Zelfde problematiek als voorgaande opname</td></tr></tbody></table><figcaption>Optie set Heropname vanwege dezelfde problematiek</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Is de problematiek voor deze PICU opname gerelateerd aan vorige PICU opname? Verplicht bij ongeplande heropnames binnen 48 uur na vorig ontslag binnen dezelfde ziekenhuis-episode.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Verwijzend specialisme</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>Geen</td></tr><tr><td>Anaesthesiologie (ANS)</td></tr><tr><td>AIDS (APT)</td></tr><tr><td>Cardio Pulmonale Chirurgie (CAP)</td></tr><tr><td>Cardiologie (CAR)</td></tr><tr><td>Algemene Chirurgie (CHI)</td></tr><tr><td>Plastische en reconstructieve Chirurgie (CHP)</td></tr><tr><td>Endocrinologie (END)</td></tr><tr><td>Gynaecologie (GYN)</td></tr><tr><td>Huidziekten (HDZ)</td></tr><tr><td>Hematologie (HEM)</td></tr><tr><td>Hemostase (HST)</td></tr><tr><td>Infectieziekten (INF)</td></tr><tr><td>Algemene Interne Geneeskunde (INT)</td></tr><tr><td>Kinder-cardiologie (KCA)</td></tr><tr><td>Kinder-cardiochirurgie (KCC)</td></tr><tr><td>Kinder-chirurgie (KCH)</td></tr><tr><td>Kinder-endocrinologie (KEC)</td></tr><tr><td>Kinder-gastro-enterologie (KGE)</td></tr><tr><td>Kinder-hematologie/immunologie (KHI)</td></tr><tr><td>Kinder-huidziekten (KHZ)</td></tr><tr><td>Algemene Paediatrie / Kindergeneeskunde (KIN / AKG)</td></tr><tr><td>Kinder-KNO (KKN)</td></tr><tr><td>Kinder-metabole stoornissen (KMB)</td></tr><tr><td>Kinder-neurochirurgie (KNC)</td></tr><tr><td>Kinder-nefrologie (KNE)</td></tr><tr><td>Kinder-neurologie (KNL)</td></tr><tr><td>Keel, Neus en Oorheelkunde (KNO)</td></tr><tr><td>Kinder-oogheelkunde (KOG)</td></tr><tr><td>Kinder-oncologie (KON)</td></tr><tr><td>Kinder-orthopaedie (KOR)</td></tr><tr><td>Kinder-plastische en reconstructieve chirurgie (KPC)</td></tr><tr><td>Kinder-psychiatrie (KPS)</td></tr><tr><td>Kinder-pulmonologie (KPU)</td></tr><tr><td>Kinder-urologie (KUR)</td></tr><tr><td>Longziekten (LON)</td></tr><tr><td>Maag-, Darm- en Leverziekten (MDL)</td></tr><tr><td>Mondziekten en Kaakchirurgie (MZK)</td></tr><tr><td>Neurochirurgie (NEC)</td></tr><tr><td>Neonatologie (NEO)</td></tr><tr><td>Neurologie (NEU)</td></tr><tr><td>Niertransplantatie (NIT)</td></tr><tr><td>Nierziekten (NIZ)</td></tr><tr><td>Nucleaire geneeskunde (NUC)</td></tr><tr><td>Oogheelkunde (OOG)</td></tr><tr><td>Orthopaedie (ORT)</td></tr><tr><td>Oncotherapie (OTH)</td></tr><tr><td>Psychiatrie (PSY)</td></tr><tr><td>Reumatologie (REU)</td></tr><tr><td>Revalidatie (REV)</td></tr><tr><td>Radiotherapie (RTH)</td></tr><tr><td>Traumatologie (TRA)</td></tr><tr><td>Urologie (URO)</td></tr><tr><td>Vaatziekten (VAA)</td></tr><tr><td>Verloskunde (VRV)</td></tr><tr><td>Zuigelingen (ZUI)</td></tr><tr><td>Kinder Intensive Care (ICK)</td></tr><tr><td>Overig (niet nader gespecificeerd) (DIV)</td></tr></tbody></table><figcaption>Optie set Verwijzend specialisme</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Het specialisme dat verantwoordelijk is voor de verwijzing van de patiënt naar de PICU of de behandeling/zorg vóór PICU opname.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Opname indicatie</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>1.0 Respiratoire insufficiëntie</td></tr><tr><td>1.1 Bovenste luchtwegprobleem</td></tr><tr><td>1.2 Lagere luchtwegprobleem (bronchiolitis, astma etc)</td></tr><tr><td>1.3 Parenchym afwijking (pneumonie, ARDS)</td></tr><tr><td>1.4 Pneumothorax</td></tr><tr><td>1.5 Neuromusculair</td></tr><tr><td>2.0 Circulatoire insufficiëntie</td></tr><tr><td>2.1 Shock</td></tr><tr><td>2.2 Ritmestoornissen</td></tr><tr><td>2.3 Hypertensie</td></tr><tr><td>2.3.1 Systemisch</td></tr><tr><td>2.3.2 Pulmonaal</td></tr><tr><td>2.4 Hartafwijking (congenitaal)</td></tr><tr><td>3.0 Cerebrale insufficiëntie</td></tr><tr><td>3.1 Status epilepticus</td></tr><tr><td>3.2 Coma / gedaald of wisselend bewustzijn</td></tr><tr><td>4.0 Metabole ontregeling</td></tr><tr><td>4.1 Diabetische ketoacidose</td></tr><tr><td>4.2 Nier insufficiëntie (acuut)</td></tr><tr><td>4.3 Lever insufficiëntie (acuut)</td></tr><tr><td>5.0 Monitoring</td></tr><tr><td>5.1 Bijzondere medicatie / procedure</td></tr><tr><td>5.2 Post CPR</td></tr><tr><td>5.3 Postoperatief</td></tr><tr><td>5.4 Preoperatief</td></tr><tr><td>5.5 Intoxicatie</td></tr><tr><td>5.6.1 ALTE</td></tr><tr><td>5.6.2 Polysomnografie</td></tr><tr><td>5.6.3 Instellen chronische beademing</td></tr><tr><td>6.0 Trauma</td></tr><tr><td>6.1 Verdrinking</td></tr><tr><td>6.2 Multi-trauma</td></tr><tr><td>6.3 (Ernstig) Traumatisch schedel-hersenletsel</td></tr><tr><td>7.0 Palliatieve/terminale zorg</td></tr></tbody></table><figcaption>Optie set Opname indicatie</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Directe aanleiding voor de opname. Het betreft hier een eerste (algemene) reden voor opname, dat hoeft niet de (PICU) diagnose te zijn die bij de Diagnose velden wordt ingevuld. Als Opname indicatie <em>Postoperatief</em> is dan moet bij PICU Diagnose een <em>Postoperatieve Procedure</em> diagnose worden ingevuld. Bij postoperatieve opnames gaat het om de eerste 24 uur na een chirurgische procedure OK.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Locatie eerste bepaling PIM score</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>In PICU</td></tr><tr><td>Buiten PICU in eigen ziekenhuis</td></tr><tr><td>Buiten eigen ziekenhuis</td></tr></tbody></table><figcaption>Optie set Locatie eerste bepaling PIM score</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>De plaats waar de eerste PIM bepalingen zijn gedaan door de PICU-arts of het PICU-team bij eerste (face-to-face) contact met patiënt:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Op de eigen PICU (standaard)</li><li>In het eigen ziekenhuis maar niet op de PICU (bv. Op SHE eigen ziekenhuis)</li><li>Buiten het eigen ziekenhuis (bv. tijdens transport)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Bij de PIM scores gaat het om de eerste waarde in het 1e uur vanaf het eerste (aansluitende) contact met een arts van de PICU. Een consult dat niet direct in een PICU-opname resulteert telt niet als eerste contact.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>EMV Openen van de ogen</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>Geen reactie</td></tr><tr><td>Op pijnprikkel</td></tr><tr><td>Op aanspreken</td></tr><tr><td>Spontaan</td></tr><tr><td>Geen reactie</td></tr><tr><td>Op pijnprikkel</td></tr><tr><td>Op aanspreken</td></tr><tr><td>Spontaan</td></tr></tbody></table><figcaption>Optie set EMV Openen van de ogen</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading {"level":5} -->
+<h5>EMV Motorische reactie</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>Geen reactie</td></tr><tr><td>Abnormaal strekken op pijnprikkel</td></tr><tr><td>Abnormaal buigen op pijnprikkel</td></tr><tr><td>Trekt terug op pijnprikkel</td></tr><tr><td>Lokaliseert pijnprikkel</td></tr><tr><td>Spontaan/gehoorzaamt opdrachten</td></tr></tbody></table><figcaption>Optie set EMV Motorische reactie</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading {"level":5} -->
+<h5>EMV Verbale reactie</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>Geen reactie</td></tr><tr><td>Kreunt op pijnprikkel/onverstaanbare geluiden</td></tr><tr><td>Huilt alleen op pijnprikkel/onsamenhangende woorden</td></tr><tr><td>Minder dan gebruikelijke woorden, huilt geïrriteerd/gedesoriënteerd praten</td></tr><tr><td>Alert, brabbelen, gebruikelijke woorden</td></tr></tbody></table><figcaption>Optie set EMV Verbale reactie</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Risicodiagnose als hoofdreden opname</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>Leverfalen, exclusief opnames na recovery levertransplantatie [HR PIM-2 &amp; VHR PIM-3]</td></tr><tr><td>Leverfalen, incl levertransplantatie (ook met ‘Recovery’) [HR PIM-2]</td></tr><tr><td>Necrotiserende enterocolitis [HR PIM-3]</td></tr><tr><td>Pseudokroep [LR PIM-2 &amp; PIM-3]</td></tr><tr><td>Obstructieve slaap-apnoe (kan ook met ‘Recovery’) [LR PIM-2 &amp; PIM-3]</td></tr><tr><td>Bronchiolitis [LR PIM-2 &amp; PIM-3]</td></tr><tr><td>Astma [LR PIM-2 &amp; PIM-3]</td></tr><tr><td>Convulsies [LR PIM-3]</td></tr><tr><td>Diabetische ketoacidose [LR PIM-2 &amp; PIM-3] <span class="has-inline-color has-vivid-red-color">(betekent ook 'acute diabetes' [PRISM-III], klopt dit wel??)</span></td></tr><tr><td><span class="has-inline-color has-vivid-red-color">Acute Diabetes [PRISM III]</span> klopt dit wel??</td></tr><tr><td><span class="has-inline-color has-vivid-red-color">Niet-operatieve cardiovasculaire aandoeningen (bv: cardiomyopathie/myocarditis) [PRISM-III]</span> ??</td></tr><tr><td>Geen van bovenstaande hoofdredenen</td></tr></tbody></table><figcaption>Optie set Risicodiagnose als hoofdreden opname</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:list -->
+<ul><li>LR: laag risico</li><li>HR: hoog risico</li><li>VHR: erg hoog risico</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Er kan maar één hoofdreden van de PICU opname zijn, uitgezonderd enkele combinaties met "Recovery": OSAS en Leverfalen (na recovery levertransplantatie).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul id="block-2aeb7bdd-d81c-4fa7-a3bd-bcdd4a36b83c"><li>OSAS: ook na adenoidectomie en/of tonsillectomie waarbij OSA de belangrijkste of onderliggende reden is voor de PICU opname (dan ook coderen als: Recovery).</li><li>Pseudocroup: behelst het hele scale van laryngitis subglottica tot laryngotracheitis.</li><li>Bronchiolitis: Kinderen die zich presenteren met respiratoire distress en/of centrale apnoes met de klinische diagnose bronchiolitis.</li><li>Convulsies: Patiënten die opgenomen worden vanwege een status epilepticus, epilepsie, koortsconvulsies of andere epilepsie syndrome waarbij de opname gedaan wordt voor het onder controle krijgen of herstellen van de convulsies of de behandeling.</li><li>Leverfalen: met of zonder recovery, als opname vanwege recovery na levertransplantatie (voor acuut of chronisch leverfalen) dan ook "Recovery" registreren.</li><li>Niet-operatieve cardiovasculaire aandoening: Acute cardiale en vasculaire condities als hoofdreden van opname, zoals: <span class="has-inline-color has-vivid-cyan-blue-color">congenital heart disease, cardiomyopathies, myocarditis, heart failure, dysrhythmias, cardiac complications of drugs, cardiogenic shock from any etiology, systemic hypertension, pulmonary hypertension, vasculitis.</span></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Beademingsregistratie</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>Geen beademing</td></tr><tr><td>Registratie totale beademingsduur</td></tr><tr><td>Registratie beademingsepisodes (met start- en stopdata)</td></tr><tr><td>Zowel registratie Totale duur als Episodes</td></tr></tbody></table><figcaption>Optie set Beademingsregistratie</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>De beademingsduur wordt per soort beademing (invasief, non-invasief, overige adem-ondersteuning) vastgelegd. Daarbij is er de keuze om de totale beademingsduur per soort zelf te berekenen en alleen die totale duur (in kalenderdagen) te registreren, of om alle beademings episodes apart te registreren met de momenten waarop betreffende beademing is gestart en gestopt, of om beide manieren van registreren te combineren. Indien de patiënt tijdens deze opname op de PICU niet is beademd (of alleen via neusbril of non-rebreathing masker) dan is de keuze hier <em>Geen beademing</em>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>PICU diagnoses</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>(Letsel) Anafylaxie</td></tr><tr><td>(Letsel) Brandwonden</td></tr><tr><td>(Letsel) Koolmonoxide vergiftiging</td></tr><tr><td>(Letsel) Geneesmiddel toxiciteit-iatrogeen</td></tr><tr><td>(Letsel) Electrocutie</td></tr><tr><td>(Letsel) Vergiftiging</td></tr><tr><td>(Letsel) Verhanging of verwurging</td></tr><tr><td>(Letsel) Hyperthermie</td></tr><tr><td>(Letsel) Hypothermie</td></tr><tr><td>(Letsel) Verdrinking</td></tr><tr><td>(Letsel) Rook inhalatie</td></tr><tr><td>(Letsel) Trauma - Abdomen</td></tr><tr><td>(Letsel) Trauma - Borstkas</td></tr><tr><td>(Letsel) Trauma - Gelaat</td></tr><tr><td>(Letsel) Trauma - Hoofd</td></tr><tr><td>(Letsel) Trauma - Skelet</td></tr><tr><td>(Letsel) Trauma - Wervelkolom</td></tr><tr><td>(Letsel) Trauma - Overig</td></tr><tr><td>(Letsel) Ingestie - drug</td></tr><tr><td>(Letsel) Ingestie - non drug</td></tr><tr><td>(Letsel) Letsel/vergiftiging/externe oorzaak-overig</td></tr><tr><td>(Cardiovasculair) Afwezige Pulmonaal Klep</td></tr><tr><td>(Cardiovasculair) Anomalie Coronair Arterie</td></tr><tr><td>(Cardiovasculair) Aorta-insufficientie</td></tr><tr><td>(Cardiovasculair) Aortastenose</td></tr><tr><td>(Cardiovasculair) ASD</td></tr><tr><td>(Cardiovasculair) AVSD</td></tr><tr><td>(Cardiovasculair) Coarctatio aortae</td></tr><tr><td>(Cardiovasculair) Cor triatriatum</td></tr><tr><td>(Cardiovasculair) Ebstein anomalie</td></tr><tr><td>(Cardiovasculair) Hypoplastisch Linker Hart Syndroom</td></tr><tr><td>(Cardiovasculair) Interruptie of Hypoplastische Aortaboog</td></tr><tr><td>(Cardiovasculair) Mitraal Insufficientie</td></tr><tr><td>(Cardiovasculair) Mitraal Stenose</td></tr><tr><td>(Cardiovasculair) Open Ductus Botalli</td></tr><tr><td>(Cardiovasculair) Pulmonaal Atresie of Stenose</td></tr><tr><td>(Cardiovasculair) Monoventrikel</td></tr><tr><td>(Cardiovasculair) Totaal Abnornaal Pulmonaal Veneuze Return</td></tr><tr><td>(Cardiovasculair) Tetralogie van Fallot</td></tr><tr><td>(Cardiovasculair) Transpositie Grote Arterien</td></tr><tr><td>(Cardiovasculair) Tricuspidaal Atresie of Stenose</td></tr><tr><td>(Cardiovasculair) Tricuspidaal Insufficientie</td></tr><tr><td>(Cardiovasculair) Truncus Arteriosus</td></tr><tr><td>(Cardiovasculair) VSD</td></tr><tr><td>(Cardiovasculair) Aortopulmonaal Venster</td></tr><tr><td>(Cardiovasculair) Arterioveneuze Malformatie</td></tr><tr><td>(Cardiovasculair) Double Outlet Rechter Ventrikel</td></tr><tr><td>(Cardiovasculair) Linker Ventrikel Uitstroom Obstructie</td></tr><tr><td>(Cardiovasculair) Pulmonaal Insufficientie</td></tr><tr><td>(Cardiovasculair) Rechter Ventrikel Uitstroom Obstructie</td></tr><tr><td>(Cardiovasculair) Hypoplastische Li ventrikel (géén HLHS)</td></tr><tr><td>(Cardiovasculair) Hypoplastische Re ventrikel</td></tr><tr><td>(Cardiovasculair) l-TGA (Levo Transpositie grote arterien)</td></tr><tr><td>(Cardiovasculair) Cardiovasculair - Congenitaal - Overige</td></tr><tr><td>(Cardiovasculair) Hartfalen</td></tr><tr><td>(Cardiovasculair) Cardiale Tumor</td></tr><tr><td>(Cardiovasculair) Cardiomyopathie/Myocarditis</td></tr><tr><td>(Cardiovasculair) Dysritmie - Supraventriculair</td></tr><tr><td>(Cardiovasculair) Dysritmie - Ventriculair</td></tr><tr><td>(Cardiovasculair) Endocarditis</td></tr><tr><td>(Cardiovasculair) Hypertensie - Pulmonaal</td></tr><tr><td>(Cardiovasculair) Hypertensie - Systemisch</td></tr><tr><td>(Cardiovasculair) Kawasaki, Ziekte van</td></tr><tr><td>(Cardiovasculair) Pericardiale Effusie of Tamponade</td></tr><tr><td>(Cardiovasculair) Vasculaire Trombose</td></tr><tr><td>(Cardiovasculair) Vasculitis</td></tr><tr><td>(Cardiovasculair) Hart-Long Transplantatie, Status na</td></tr><tr><td>(Cardiovasculair) Harttransplantatie, Status na</td></tr><tr><td>(Cardiovasculair) Rheumatic Heart Disease</td></tr><tr><td>(Cardiovasculair) Hartoperatie in het verleden</td></tr><tr><td>(Cardiovasculair) Longembolie</td></tr><tr><td>(Cardiovasculair) Myocard (infarct/Ischemie)</td></tr><tr><td>(Cardiovasculair) Cardiovasculair - Verworven- Overige</td></tr><tr><td>(Neurologisch) Botulisme</td></tr><tr><td>(Neurologisch) Hersenabces</td></tr><tr><td>(Neurologisch) Hersen AV Malformatie</td></tr><tr><td>(Neurologisch) Hersendood</td></tr><tr><td>(Neurologisch) Herseninfarct of Beroerte</td></tr><tr><td>(Neurologisch) Hersentumor</td></tr><tr><td>(Neurologisch) CZS Shunt Dysfunctie of Infectie</td></tr><tr><td>(Neurologisch) Encefalitis</td></tr><tr><td>(Neurologisch) Encefalopathie, Acuut - Hypoxisch Ischaemisch</td></tr><tr><td>(Neurologisch) Encefalopatie, Acuut - Overige</td></tr><tr><td>(Neurologisch) Encefalopatie, Chronisch Degeneratief</td></tr><tr><td>(Neurologisch) Encefalopatie, Chronisch Statisch</td></tr><tr><td>(Neurologisch) Guillain Barre Syndroom</td></tr><tr><td>(Neurologisch) Hydrocefalus</td></tr><tr><td>(Neurologisch) Intracraniele Bloeding (spontaan)</td></tr><tr><td>(Neurologisch) Intracraniele Hypertensie</td></tr><tr><td>(Neurologisch) Meningitis</td></tr><tr><td>(Neurologisch) Meningomyelocele of Spina Bifida</td></tr><tr><td>(Neurologisch) Myopathie</td></tr><tr><td>(Neurologisch) Neuropathie</td></tr><tr><td>(Neurologisch) Convulsies</td></tr><tr><td>(Neurologisch) Myelum, Beschadiging</td></tr><tr><td>(Neurologisch) Veneuze Sinus Trombose</td></tr><tr><td>(Neurologisch) Cerebraal Aneurysma</td></tr><tr><td>(Neurologisch) Spierdystrofie</td></tr><tr><td>(Neurologisch) Myastenia Gravis</td></tr><tr><td>(Neurologisch) Tetanus</td></tr><tr><td>(Neurologisch) Arnold Chiari Malformation</td></tr><tr><td>(Neurologisch) Hersencyste</td></tr><tr><td>(Neurologisch) Epilepsie (comorbiditeit)</td></tr><tr><td>(Neurologisch) Hersenoedeem</td></tr><tr><td>(Neurologisch) Intracraniele bloeding (Traumatisch)</td></tr><tr><td>(Neurologisch) Acute disseminated encephalomyelitis (ADEM)</td></tr><tr><td>(Neurologisch) Congenitale hersenafwijking</td></tr><tr><td>(Neurologisch) Febrile convulsion</td></tr><tr><td>(Neurologisch) Transverse Myelitis</td></tr><tr><td>(Neurologisch) Neurologisch - Overig</td></tr><tr><td>(Respiratoir) Choanen Atresie of Stenose</td></tr><tr><td>(Respiratoir) Epiglottitis</td></tr><tr><td>(Respiratoir) Vreemdlichaam - Inhalatie</td></tr><tr><td>(Respiratoir) Laryngotracheobronchitis</td></tr><tr><td>(Respiratoir) Obstructief Slaap Apnoe Syndroom</td></tr><tr><td>(Respiratoir) Pierre Robin Syndroom</td></tr><tr><td>(Respiratoir) Retrofaryngeaal Abces</td></tr><tr><td>(Respiratoir) Subglottische Stenose</td></tr><tr><td>(Respiratoir) Tracheitis</td></tr><tr><td>(Respiratoir) Bovenste Luchtwegobstructie - Overige</td></tr><tr><td>(Respiratoir) Bovenste Luchtweginfectie - Overige</td></tr><tr><td>(Respiratoir) Stembandparese</td></tr><tr><td>(Respiratoir) Subglottisch Hemangioom</td></tr><tr><td>(Respiratoir) Larygomalacia</td></tr><tr><td>(Respiratoir) Bovenste Luchtwegen - Overige</td></tr><tr><td>(Respiratoir) Astma</td></tr><tr><td>(Respiratoir) Bronchiolitis</td></tr><tr><td>(Respiratoir) Chronische Longziekte</td></tr><tr><td>(Respiratoir) Malacie - Trachea en/of Bronchus</td></tr><tr><td>(Respiratoir) Mediastinale Massa</td></tr><tr><td>(Respiratoir) Stenose - Trachea en/of Bronchus</td></tr><tr><td>(Respiratoir) Tracheo-oesofageale Fistel</td></tr><tr><td>(Respiratoir) Vaatring</td></tr><tr><td>(Respiratoir) Bronchiectasis</td></tr><tr><td>(Respiratoir) Lage luchtwegen - Overige</td></tr><tr><td>(Respiratoir) Luchtlek Syndroom</td></tr><tr><td>(Respiratoir) Apnoe - Centraal</td></tr><tr><td>(Respiratoir) ARDS</td></tr><tr><td>(Respiratoir) Aspiratie</td></tr><tr><td>(Respiratoir) Chylothorax</td></tr><tr><td>(Respiratoir) Congenitale Hernia Diafragmatic</td></tr><tr><td>(Respiratoir) Congenitale Longafwijking</td></tr><tr><td>(Respiratoir) Cystic Fibrosis</td></tr><tr><td>(Respiratoir) Empyeem</td></tr><tr><td>(Respiratoir) Hyaliene Membraanziekte</td></tr><tr><td>(Respiratoir) Hypoventilatie - Centraal</td></tr><tr><td>(Respiratoir) Longabces</td></tr><tr><td>(Respiratoir) Meconium Aspiratie Syndroom</td></tr><tr><td>(Respiratoir) Pleura Effusie</td></tr><tr><td>(Respiratoir) Pneumonie of Pneumonitis</td></tr><tr><td>(Respiratoir) Long Hypoplasie</td></tr><tr><td>(Respiratoir) Pulmonaal Oedeem</td></tr><tr><td>(Respiratoir) Respiratoir Falen</td></tr><tr><td>(Respiratoir) Lage Luchtweginfectie - Overige</td></tr><tr><td>(Respiratoir) Kinkhoest</td></tr><tr><td>(Respiratoir) Longtransplantatie, Status na</td></tr><tr><td>(Respiratoir) Voorbijgaande Tachypnoe van de Pasgeborene</td></tr><tr><td>(Respiratoir) Atelectase</td></tr><tr><td>(Respiratoir) Ademhaling - Overige</td></tr><tr><td>(Renaal) Hemolytisch Uremisch Syndroom</td></tr><tr><td>(Renaal) Nefrotisch en/of Nefritisch Syndroom</td></tr><tr><td>(Renaal) Nierfalen - Acuut</td></tr><tr><td>(Renaal) Nierfalen - Chronisch</td></tr><tr><td>(Renaal) Niertransplantatie, Status na</td></tr><tr><td>(Renaal) Urineweg Infectie</td></tr><tr><td>(Renaal) Hydronefrose</td></tr><tr><td>(Renaal) Renaal - Overige</td></tr><tr><td>(MDL) Darmobstructie</td></tr><tr><td>(MDL) Colitis</td></tr><tr><td>(MDL) Gastroenteritis</td></tr><tr><td>(MDL) Gastrointestinale Bloeding</td></tr><tr><td>(MDL) Gastroschizis of Exomphalus</td></tr><tr><td>(MDL) Hepatitis</td></tr><tr><td>(MDL) Invaginatie</td></tr><tr><td>(MDL) Leverfalen - Acuut</td></tr><tr><td>(MDL) Leverfalen - Chronisch</td></tr><tr><td>(MDL) Leverziekte - Overige</td></tr><tr><td>(MDL) Necrotiserende Enterocolitis</td></tr><tr><td>(MDL) Oesofagus Atresie</td></tr><tr><td>(MDL) Pancreatitis</td></tr><tr><td>(MDL) Peritonitis</td></tr><tr><td>(MDL) Pylorus Stenose</td></tr><tr><td>(MDL) Short Bowel Syndroom</td></tr><tr><td>(MDL) Ulcus - Duodenum</td></tr><tr><td>(MDL) Ulcus - Maag of Gastritis</td></tr><tr><td>(MDL) Varices - Oesofagus of Maag</td></tr><tr><td>(MDL) Galgang Atresie</td></tr><tr><td>(MDL) Darmperforatie</td></tr><tr><td>(MDL) Hirschsprung, Ziekte van</td></tr><tr><td>(MDL) Neonatale Icterus</td></tr><tr><td>(MDL) Oesofageaal Vreemdlichaam</td></tr><tr><td>(MDL) Portale Hyperternsie</td></tr><tr><td>(MDL) Levertransplantatie, Status na</td></tr><tr><td>(MDL) Volvulus</td></tr><tr><td>(MDL) Gastro-oesophagiale reflux</td></tr><tr><td>(MDL) Veno Occlusive Disease (VOD)</td></tr><tr><td>(MDL) Chylus Effusie</td></tr><tr><td>(MDL) Gastrointestinaal, Overige</td></tr><tr><td>(Diversen) ALTE</td></tr><tr><td>(Diversen) Hartstilstand - In Ziekenhuis</td></tr><tr><td>(Diversen) Hartstilstand - Buiten Ziekenhuis</td></tr><tr><td>(Diversen) Chromosoom Afwijking</td></tr><tr><td>(Diversen) Stollingsstoornis</td></tr><tr><td>(Diversen) Dehydratie</td></tr><tr><td>(Diversen) Dermatologische Afwijking</td></tr><tr><td>(Diversen) Diabetes Insipidus</td></tr><tr><td>(Diversen) Diabetes Mellitus met Ketoacidose</td></tr><tr><td>(Diversen) Diabetes Mellitus zonder Ketoacidose</td></tr><tr><td>(Diversen) Electroliet verstoring</td></tr><tr><td>(Diversen) Endocriene Afwijking</td></tr><tr><td>(Diversen) Gasgangreen</td></tr><tr><td>(Diversen) Thuisbeademing Patient</td></tr><tr><td>(Diversen) Hypoglycemie</td></tr><tr><td>(Diversen) IC Diagnostische Monitoring - Electief</td></tr><tr><td>(Diversen) IC Procedure</td></tr><tr><td>(Diversen) Immunodeficientie - Congenitaal</td></tr><tr><td>(Diversen) Immunosuppressie - Verworven</td></tr><tr><td>(Diversen) Stofwisselingsziekte, Aangeboren</td></tr><tr><td>(Diversen) Leukemie of Lymfoom</td></tr><tr><td>(Diversen) Necrotiserende Fasciitis</td></tr><tr><td>(Diversen) Neutropenie</td></tr><tr><td>(Diversen) Pancytopenie</td></tr><tr><td>(Diversen) Feochromocytoom</td></tr><tr><td>(Diversen) Prematuriteit (&lt; 37/4 &amp; &lt; 12 mnd)</td></tr><tr><td>(Diversen) Ademstilstand - In Ziekenhuis</td></tr><tr><td>(Diversen) Ademstilstand - Buiten Ziekenhuis</td></tr><tr><td>(Diversen) Sepsis</td></tr><tr><td>(Diversen) Shock - Cardiogeen</td></tr><tr><td>(Diversen) Shock - Hypovolemisch</td></tr><tr><td>(Diversen) Shock - Septisch</td></tr><tr><td>(Diversen) Shock (ongespecificeerd)</td></tr><tr><td>(Diversen) SIRS</td></tr><tr><td>(Diversen) Neoplasma Solide Orgaan - Maligne</td></tr><tr><td>(Diversen) Neoplasma Solide Orgaan -Niet Maligne</td></tr><tr><td>(Diversen) Syndroom of Malformatie</td></tr><tr><td>(Diversen) Toxisch Shock Syndroom</td></tr><tr><td>(Diversen) Beenmergtransplantatie</td></tr><tr><td>(Diversen) Craniosynostose</td></tr><tr><td>(Diversen) Hydrops Foetalis</td></tr><tr><td>(Diversen) Neonaat - Kind van Diabetische Moeder</td></tr><tr><td>(Diversen) Neonaat - Intrauteriene Groeivertraging</td></tr><tr><td>(Diversen) Beenmergtransplantatie, Status na</td></tr><tr><td>(Diversen) Scoliose</td></tr><tr><td>(Diversen) Tumorlysis Syndroom</td></tr><tr><td>(Diversen) Wondinfectie</td></tr><tr><td>(Diversen) Hematologische Ziekte</td></tr><tr><td>(Diversen) Orgaandonatie</td></tr><tr><td>(Diversen) Graft vs Host disease</td></tr><tr><td>(Diversen) Cystic Hygroma</td></tr><tr><td>(Diversen) Ademstilstand (op de PICU)</td></tr><tr><td>(Diversen) Hartstilstand op PICU</td></tr><tr><td>(Diversen) Down syndroom</td></tr><tr><td>(Diversen) Velo Cardio Faciaal Syndroom (22q11.2)</td></tr><tr><td>(Diversen) Diabetes (comorbiditeit)</td></tr><tr><td>(Diversen) SIADH</td></tr><tr><td>(Diversen) Osteomyelitis</td></tr><tr><td>(Diversen) Rhabdomyolysis</td></tr><tr><td>(Diversen) Diversen - Overige</td></tr><tr><td>(Chir.-Div/Anesth) Anesthetische Complicatie</td></tr><tr><td>(Chir.-Div/Anesth) Hartkatheterisatie</td></tr><tr><td>(Chir.-Div/Anesth) Ex-prematuur, na Algehele Anesthesie</td></tr><tr><td>(Chir.-Div/Anesth) Invasieve Radiologie Procedure</td></tr><tr><td>(Chir.-Div/Anesth) Massale Intraoperatieve Transfusie</td></tr><tr><td>(Chir.-Div/Anesth) Hartkatheterisatie - Ballon Septostomie</td></tr><tr><td>(Chir.-Div/Anesth) Hartkatheterisatie - Interventie</td></tr><tr><td>(Chir.-Div/Anesth) Postoperatieve bloeding</td></tr><tr><td>(Chir.-Div/Anesth) Na Procedure - Overige</td></tr><tr><td>(Neurochirurgie) Craniotomie - Fossa Anterior</td></tr><tr><td>(Neurochirurgie) Craniotomie - Fossa Posterior</td></tr><tr><td>(Neurochirurgie) CZS Shunt - Insertie of revisie</td></tr><tr><td>(Neurochirurgie) Decompressie - Craniaal</td></tr><tr><td>(Neurochirurgie) Decompressie - Myelum</td></tr><tr><td>(Neurochirurgie) Hemisferectomie of Lobectomie</td></tr><tr><td>(Neurochirurgie) ICP monitor of Ventrikeldrain Insertie</td></tr><tr><td>(Neurochirurgie) Intracraniele Bloeding, Evacuatie</td></tr><tr><td>(Neurochirurgie) Myelomeningocoele reparatie</td></tr><tr><td>(Neurochirurgie) Decompressie - Craniocervicaal</td></tr><tr><td>(Neurochirurgie) Neurochirurgie - Overige</td></tr><tr><td>(Thoraxchirurgie) Diafragma Pliceren</td></tr><tr><td>(Thoraxchirurgie) Diafragma Herstel</td></tr><tr><td>(Thoraxchirurgie) Longbiopsie</td></tr><tr><td>(Thoraxchirurgie) Long Decorticatie</td></tr><tr><td>(Thoraxchirurgie) Oesofagus Atresie Herstel</td></tr><tr><td>(Thoraxchirurgie) Pneumectomie of Lobectomie</td></tr><tr><td>(Thoraxchirurgie) Thoracale Tumor, Resectie</td></tr><tr><td>(Thoraxchirurgie) Tracheo-oesofageale Fistel, Herstel</td></tr><tr><td>(Thoraxchirurgie) Tracheopexie</td></tr><tr><td>(Thoraxchirurgie) VATS procedure</td></tr><tr><td>(Thoraxchirurgie) Thoraxchirurgie - Overige</td></tr><tr><td>(KNO chirurgie) Adenotomie en/of Tonsillectomie</td></tr><tr><td>(KNO chirurgie) Choanen Atresie, Herstel</td></tr><tr><td>(KNO chirurgie) Cricoid Split</td></tr><tr><td>(KNO chirurgie) Laryngeale Reconstructie</td></tr><tr><td>(KNO chirurgie) Laryngobronchoscopie</td></tr><tr><td>(KNO chirurgie) Tracheostomie</td></tr><tr><td>(KNO chirurgie) Retopharyngeal abces drainage</td></tr><tr><td>(KNO chirurgie) Laryngoplastie</td></tr><tr><td>(KNO chirurgie) Trachea reconstructie/ Tracheaplastiek</td></tr><tr><td>(KNO chirurgie) KNO - Overige</td></tr><tr><td>(Alg. chirurgie) Abdominale Tumor, Resectie</td></tr><tr><td>(Alg. chirurgie) Appendectomie</td></tr><tr><td>(Alg. chirurgie) Extrophia Vesicae, Herstel</td></tr><tr><td>(Alg. chirurgie) Brandwonden Chirurgie</td></tr><tr><td>(Alg. chirurgie) Fundoplicatie</td></tr><tr><td>(Alg. chirurgie) Gastroschizis of Exomphalos Herstel</td></tr><tr><td>(Alg. chirurgie) GI endoscopie en/of Sclerotherapie</td></tr><tr><td>(Alg. chirurgie) Intussusceptie Herstel</td></tr><tr><td>(Alg. chirurgie) Kasai</td></tr><tr><td>(Alg. chirurgie) Laparotomie - Overige</td></tr><tr><td>(Alg. chirurgie) Transplantatie - Nier</td></tr><tr><td>(Alg. chirurgie) Transplantatie - Lever</td></tr><tr><td>(Alg. chirurgie) Transplantatie - Dunne Darm</td></tr><tr><td>(Alg. chirurgie) Urogenitale Chirurgie - Overige</td></tr><tr><td>(Alg. chirurgie) Laparotomie - Darmobstructie</td></tr><tr><td>(Alg. chirurgie) Laparotomie - Darmperforatie</td></tr><tr><td>(Alg. chirurgie) Laparotomie - GI Bloeding</td></tr><tr><td>(Alg. chirurgie) Laparotomie - Necrotiserende Enterocolitis</td></tr><tr><td>(Alg. chirurgie) Laparotomie - Peritonitis</td></tr><tr><td>(Alg. chirurgie) Laparotomie - Trauma</td></tr><tr><td>(Alg. chirurgie) Aorta chirurgie (Buik)</td></tr><tr><td>(Alg. chirurgie) Wound Debridement</td></tr><tr><td>(Alg. chirurgie) Algemene Chirurgie - Overige</td></tr><tr><td>(Craniofaciale chir.) Schedel - Reconstructie</td></tr><tr><td>(Craniofaciale chir.) Dentale Chirurgie</td></tr><tr><td>(Craniofaciale chir.) Cheiloschizis herstel</td></tr><tr><td>(Craniofaciale chir.) Mandibulaire Mobilisatie</td></tr><tr><td>(Craniofaciale chir.) Midface Mobilisatie</td></tr><tr><td>(Craniofaciale chir.) Palatoschizis Herstel</td></tr><tr><td>(Craniofaciale chir.) Craniofaciale Chirurgie - Overige</td></tr><tr><td>(Orthoped. chir.) Fractuur Fixatie</td></tr><tr><td>(Orthoped. chir.) Spinale Instrumentatie</td></tr><tr><td>(Orthoped. chir.) Orthopedische Chirurgie - Overige</td></tr><tr><td>(Hartchirurgie) Annuloplasty</td></tr><tr><td>(Hartchirurgie) Coronair arterie herstel met intrapulmonaire tunnel (Takeuchi)</td></tr><tr><td>(Hartchirurgie) Coronair arterie herstel zonder intrapulmonaire tunnel</td></tr><tr><td>(Hartchirurgie) Pulmonale arterie - reimplantatie</td></tr><tr><td>(Hartchirurgie) Aorta klep vervanging</td></tr><tr><td>(Hartchirurgie) Aortopexie</td></tr><tr><td>(Hartchirurgie) Aortoplastie (not arch repair or graft)</td></tr><tr><td>(Hartchirurgie) AP window repair</td></tr><tr><td>(Hartchirurgie) Arterial switch operation</td></tr><tr><td>(Hartchirurgie) Arterial switch operation with pulmonary artery band removal</td></tr><tr><td>(Hartchirurgie) Arterial switch operation with repair of sub PS</td></tr><tr><td>(Hartchirurgie) Arterial switch operation with VSD closure</td></tr><tr><td>(Hartchirurgie) ASD and VSD repair</td></tr><tr><td>(Hartchirurgie) ASD primum repair</td></tr><tr><td>(Hartchirurgie) ASD surgery (including ASD secundum, sinus venosus ASD, patent forament ovale closure)</td></tr><tr><td>(Hartchirurgie) Atrial septectomy</td></tr><tr><td>(Hartchirurgie) Atrial switch operation</td></tr><tr><td>(Hartchirurgie) Atrial switch operation with repair of sub PS</td></tr><tr><td>(Hartchirurgie) Atrial switch operation with VSD closure</td></tr><tr><td>(Hartchirurgie) Coarction repair &gt; 30 dgn</td></tr><tr><td>(Hartchirurgie) Coarction repair &lt;= 30 dgn</td></tr><tr><td>(Hartchirurgie) Common atrium Closure</td></tr><tr><td>(Hartchirurgie) Cor triatriatum repair</td></tr><tr><td>(Hartchirurgie) Coronary AV fistula repair</td></tr><tr><td>(Hartchirurgie) Damus-Kaye-Stansel procedure</td></tr><tr><td>(Hartchirurgie) Double switch</td></tr><tr><td>(Hartchirurgie) Double-outlet right ventricle repair with or without repair of right ventricular obstruction</td></tr><tr><td>(Hartchirurgie) Fontan procedure</td></tr><tr><td>(Hartchirurgie) Glenn shunt</td></tr><tr><td>(Hartchirurgie) Hypoplastic or interrupted arch repair with VSD closure</td></tr><tr><td>(Hartchirurgie) Hypoplastic or interrupted arch repair without VSD closure</td></tr><tr><td>(Hartchirurgie) Intracardiac tumour excision</td></tr><tr><td>(Hartchirurgie) Konno procedure</td></tr><tr><td>(Hartchirurgie) Left ventricular outflow tract patch</td></tr><tr><td>(Hartchirurgie) Left ventricular to pulmonary artery conduit</td></tr><tr><td>(Hartchirurgie) Left ventricular to right atrial shunt repair</td></tr><tr><td>(Hartchirurgie) Mitral valve replacement</td></tr><tr><td>(Hartchirurgie) Pacemaker insertion/replacement</td></tr><tr><td>(Hartchirurgie) Partially anomalous pulmonary venous connection surgery</td></tr><tr><td>(Hartchirurgie) PDA surgery &gt;30d of age</td></tr><tr><td>(Hartchirurgie) PDA surgery ≤30d of age</td></tr><tr><td>(Hartchirurgie) Pulmonary artery banding</td></tr><tr><td>(Hartchirurgie) Pulmonary artery stenosis repair</td></tr><tr><td>(Hartchirurgie) Pulmonary outflow tract augmentation</td></tr><tr><td>(Hartchirurgie) Pulmonary valve replacement</td></tr><tr><td>(Hartchirurgie) Right ventricular infundibulectomy</td></tr><tr><td>(Hartchirurgie) Right ventricular to pulmonary artery conduit</td></tr><tr><td>(Hartchirurgie) Ross procedure</td></tr><tr><td>(Hartchirurgie) Semilunar valve closure</td></tr><tr><td>(Hartchirurgie) Septal defect repair (unspecified)</td></tr><tr><td>(Hartchirurgie) Stage 1 repair of hypoplatsic left heart syndrome (Norwood)</td></tr><tr><td>(Hartchirurgie) Stage 1 repair of nonhypoplastic left heart syndrome conditions</td></tr><tr><td>(Hartchirurgie) Subaortic stenosis resection</td></tr><tr><td>(Hartchirurgie) Systemic to pulmonary artery shunt</td></tr><tr><td>(Hartchirurgie) Tetralogy of Fallot total repair</td></tr><tr><td>(Hartchirurgie) Tetralogy of Fallot with pulmonary atresia repair</td></tr><tr><td>(Hartchirurgie) Total repair of anamalous pulmonary veins &gt;30d of age</td></tr><tr><td>(Hartchirurgie) Total repair of anamalous pulmonary veins ≤30d of age</td></tr><tr><td>(Hartchirurgie) Transection of pulmonary artery</td></tr><tr><td>(Hartchirurgie) Transitional or complete atrioventricular canal repair with or without valve replacement</td></tr><tr><td>(Hartchirurgie) Transplant – Heart</td></tr><tr><td>(Hartchirurgie) Transplant – Heart Lung</td></tr><tr><td>(Hartchirurgie) Transplant – Lung</td></tr><tr><td>(Hartchirurgie) Transposition-VSD sub PS repair (Rastelli)</td></tr><tr><td>(Hartchirurgie) Transverse arch graft</td></tr><tr><td>(Hartchirurgie) Tricuspid valve replacement</td></tr><tr><td>(Hartchirurgie) Tricuspid valve repositioning for Ebstein anomaly &gt;30d of age</td></tr><tr><td>(Hartchirurgie) Tricuspid valve repositioning for neonatal Ebstein ≤30d of age</td></tr><tr><td>(Hartchirurgie) Truncus arteriosus and interrupted arch repair</td></tr><tr><td>(Hartchirurgie) Truncus arteriosus repair</td></tr><tr><td>(Hartchirurgie) Unifocalization for tetralogy of Fallot - pulmonary atresia</td></tr><tr><td>(Hartchirurgie) Valvectomy of tricuspid valve</td></tr><tr><td>(Hartchirurgie) Valvotomy - valvuloplasty (Aortic) ≤30d of age</td></tr><tr><td>(Hartchirurgie) Valvotomy - valvuloplasty (Aortic) &gt;30d of age</td></tr><tr><td>(Hartchirurgie) Valvotomy - valvuloplasty (Mitral)</td></tr><tr><td>(Hartchirurgie) Valvotomy - valvuloplasty (Pulmonary)</td></tr><tr><td>(Hartchirurgie) Valvotomy - valvuloplasty (Tricuspid)</td></tr><tr><td>(Hartchirurgie) Vascular ring surgery</td></tr><tr><td>(Hartchirurgie) Ventriculomyotomy</td></tr><tr><td>(Hartchirurgie) VSD closure and coarction repair</td></tr><tr><td>(Hartchirurgie) VSD closure and pulmonary artery band removal</td></tr><tr><td>(Hartchirurgie) VSD closure and pulmonary valvotomy or infundibular resection</td></tr><tr><td>(Hartchirurgie) VSD enlargement for repair of complex anomaly (single ventricle)</td></tr><tr><td>(Hartchirurgie) VSD repair</td></tr><tr><td>(Hartchirurgie) Chest closure</td></tr><tr><td>(Hartchirurgie) ECMO cannulation/exploration</td></tr><tr><td>(Hartchirurgie) Emergency chest opening</td></tr><tr><td>(Hartchirurgie) Pulmonary venous stenosis repair</td></tr><tr><td>(Hartchirurgie) Hartoperatie Gesloten - Overige</td></tr><tr><td>(Hartchirurgie) Hartoperatie Open - Overige</td></tr></tbody></table><figcaption>Optie set PICU diagnoses</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Reden van ontslag</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>Klaar voor niet IC zorg</td></tr><tr><td>Ontslag naar palliatieve zorg</td></tr><tr><td>Ontslag ten gevolge van plaatsgebrek op PICU</td></tr><tr><td>Huidige (PICU) zorg voortgezet op andere afdeling</td></tr><tr><td>Gespecialiseerde zorg op andere afdeling</td></tr><tr><td>Ontslag tegen medisch advies</td></tr><tr><td>Ontslag wegens uitstel ingreep</td></tr><tr><td>Overleden</td></tr></tbody></table><figcaption>Optie set Reden van ontslag</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:list -->
+<ul><li><em>Ontslag wegens uitstel ingreep</em>: pre-operatieve opnames die voortijdig worden ontslagen omdat ingreep niet plaatsvindt (ongeacht reden voor het uitstel). </li><li><em>Ontslag naar palliatieve zorg</em>: Terugtrekken huidig behandelniveau in veronderstelling dat patiënt hier geen profijt meer van zal ondervinden; dit betreft patiënten waarvan we verwachten dat ze op korte termijn zullen overlijden. Patiënten met een 'no return' (volledige behandeling echter geen heropname IC) verklaring, maar verder met volledig behandelplan vallen hier niet onder. </li><li><em>Ontslag ten gevolge van plaatsgebrek</em>: Niet gepland ontslag in verband met IC bedden tekort. Geldt ook voor nachtelijke transfer naar Special-/High- of Medium Care. </li><li><em>Zorg voortgezet op andere afdeling</em>: Huidig behandelniveau gecontinueerd op andere (P)ICU. </li><li><em>Gespecialiseerde (ic) zorg op andere afdeling</em>: Overplaatsing naar (P)ICU met een meer gespecialiseerd behandelniveau; bijvoorbeeld overplaatsing naar een brandwondencentrum. </li><li><em>Ontslag tegen medisch advies</em>: Ontslag op verzoek (ouders) patiënt tegen advies van behandelend arts in.</li><li><em>Overleden</em>: Indien de reden <em>Overleden</em> is dan moet ook de <em>Plaats van overlijden</em> en het tijdstip worden ingevuld.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":5} -->
+<h5>Bestemming afdeling eigen UMC na ontslag PICU</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>(Zorg)Afdeling (zonder extra bewaking)</td></tr><tr><td>NICU (IC Neonatologie)</td></tr><tr><td>Volwassen-IC /CCU</td></tr><tr><td>Afdeling met extra bewaking (HDU/HighCare)</td></tr><tr><td>Recovery</td></tr><tr><td>Overig</td></tr><tr><td>Kraamafdeling</td></tr><tr><td>Longstay IC</td></tr><tr><td>Mortuarium</td></tr><tr><td>Direct aansluitend ontslag uit eigen UMC</td></tr><tr><td>Onbekend</td></tr></tbody></table><figcaption>Optie set Bestemming afdeling eigen UMC na ontslag PICU</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Specificatie van de afdeling waar de patiënt heen is gegaan binnen het eigen UMC direct na ontslag van de PICU. Zogenaamde (HDU of HC) High-Care units (buiten de PICU) vallen onder <em>Afdeling met extra bewaking</em>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Relaties en sleutelvelden</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Elke dataset heeft een 1 op veel relatie met de onderliggende via de volgende sleutelvelden:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Patiënt - Ziekenhuis episode: <ul><li>patiënt ziekenhuis nummer binnen het ziekenhuis.</li></ul></li><li>Ziekenhuis episode - PICU episode: <ul><li>patiënt ziekenhuis nummer binnen het ziekenhuis en</li><li>PICU opname- en ontslagdatum binnen de periode van de ziekenhuis episode opname- en ontslagdatum.</li></ul></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Validatie regels</h2>
+<!-- /wp:heading -->
